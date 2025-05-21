@@ -163,8 +163,9 @@ For support or inquiries:
                    
 * **🚀 Deployment**
 The site can be hosted on:
-- Netlify (Static hosting)
-- Vercel (Frontend deployment)
+- Netlify (Static hosting) 
+Final Project Deployment Link: https://leobentech.netlify.app/
+- Vercel (Frontend deployment) 
 - AWS S3 (Scalable cloud hosting)
 - GitHub (Full Stack deployment}
 
