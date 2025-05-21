@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEOBEN TECHNOLOGIES - Help & FAQs</title>
+    <meta name="description" content="Help and FAQs for LEOBEN TECHNOLOGIES">
+    <meta name="keywords" content="LEOBEN TECHNOLOGIES, help, FAQs, support">
+    <meta name="author" content="Emma Aima Leoben">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            margin: 0; padding: 0; 
+            background: #b0d5fa; 
+        }
+
+        header, footer { 
+            background: #222; 
+            color: #c2dbf8; 
+            padding: 1em 2em; 
+        }
+
+        .container { 
+            max-width: 900px; 
+            margin: 40px auto; 
+            background: #fff; 
+            padding: 32px; 
+            border-radius: 8px; 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        h1 { 
+            color: #2c3e50;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
+        }
+
+        h2 { 
+            color: #2980b9; 
+            margin-top: 32px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        h3 {
+            color: rgb(54, 95, 185);
+            margin-top: 24px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        .faq { 
+            margin-bottom: 24px; 
+        }
+
+        .faq-question { 
+            font-weight: bold; 
+            margin-bottom: 6px; 
+        }
+
+        ul { 
+            margin: 0 0 16px 24px; 
+        }
+        li { 
+            margin-bottom: 8px; 
+        }
+
+        @media (max-width: 600px) {
+            .container { padding: 16px; }
+        }
+
+        /* Dropdown Styles */
+.dropdown-container {
+    position: relative;
+    display: inline-block; /* Ensures proper positioning */
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    padding: 10px 0; /* Better padding structure */
+    min-width: 200px;
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    z-index: 1000;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin-top: 5px; /* Small gap from trigger */
+}
+
+/* Show dropdown on hover AND focus (for accessibility) */
+.dropdown-container:hover .dropdown-menu,
+.dropdown-container:focus-within .dropdown-menu,
+.dropdown-menu.show { /* Added show class for JavaScript control */
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.dropdown-menu a {
+    padding: 10px 16px;
+    border-radius: 4px;
+    color: #333;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+    font-size: 14px;
+}
+
+.dropdown-menu a:hover,
+.dropdown-menu a:focus {
+    background: rgba(76, 108, 216, 0.1);
+    color: #1a3fd9;
+    outline: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .dropdown-menu {
+        position: static; /* Stack on mobile */
+        width: 100%;
+        box-shadow: none;
+        border: 1px solid #eee;
+        margin-top: 8px;
+    }
+    
+    .dropdown-container {
+        display: block; /* Full width on mobile */
+        width: 100%;
+    }
+}
+
+/* Accessibility improvements */
+.dropdown-menu a:focus {
+    background: rgba(76, 108, 216, 0.2);
+}
+
+        /* Testimonials Section */
+        .testimonials {
+            background-color: #c3eff5;
+            text-align: center;
+        }
+        
+        .testimonial-slider {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .testimonial {
+            padding: 30px;
+            background: var(--light-color);
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            margin: 20px;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+            color: var(--text-light);
+        }
+        
+        .testimonial-author {
+            font-weight: bold;
+            color: var(--dark-color);
+        }
+        
+        /* Newsletter Section */
+        .newsletter {
+            background: linear-gradient(rgba(129, 154, 236, 0.9), rgba(196, 209, 252, 0.9)), url('https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+            color: var(--white);
+            text-align: center;
+            padding: 80px 20px;
+        }
+        
+        .newsletter h2 {
+            margin-bottom: 20px;
+        }
+        
+        .newsletter p {
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+        
+        .newsletter-form {
+            display: flex;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
+        .newsletter-form input {
+            flex: 1;
+            padding: 12px 15px;
+            border: none;
+            border-radius: 4px 0 0 4px;
+        }
+        
+        .newsletter-form button {
+            border-radius: 0 4px 4px 0;
+            background: var(--dark-color);
+        }
+        
+        .newsletter-form button:hover {
+            background: #1a252f;
+        }
+        
+        /* Footer Styles */
+        .main-footer {
+            background-color: var(--dark-color);
+            color: var(--white);
+            padding: 60px 0 20px;
+        }
+        
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+            color: #1a252f;
+        }
+        
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background: var(--primary-color);
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-column a {
+            color: #194745;
+            text-decoration: none;
+            transition: var(--transition);
+            text-align: justify;
+        }
+        
+        .footer-column a:hover {
+            color: var(--primary-color);
+            padding-left: 5px;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(55, 35, 240, 0.397);
+            border-radius: 50%;
+            transition: var(--transition);
+        }
+        
+        .social-links a:hover {
+            background: var(--primary-color);
+            transform: translateY(-3px);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(25, 243, 243, 0.63);
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .deals-wrapper {
+                flex-direction: column;
+            }
+            
+            .deals-image {
+                order: -1;
+                margin-bottom: 30px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+            
+            .main-nav ul {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 80px);
+                background: var(--white);
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                transition: var(--transition);
+            }
+            
+            .main-nav ul.active {
+                left: 0;
+            }
+            
+            .hero {
+                padding: 80px 20px;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .newsletter-form {
+                flex-direction: column;
+            }
+            
+            .newsletter-form input {
+                border-radius: 4px;
+                margin-bottom: 10px;
+            }
+            
+            .newsletter-form button {
+                border-radius: 4px;
+                width: 100%;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .product-list {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+    <div class="header-container">
+        <div class="logo-container">
+            <img src="LT.jpg" alt="LEOBEN TECHNOLOGIES Logo" class="site-logo">
+            <h1 class="logo">LEOBEN TECHNOLOGIES</h1>
+        </div>
+        
+        <nav class="main-nav">
+            <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    
+                    <li class="dropdown-container">
+                    <a href="products.html" class="dropdown-trigger">Products &#9662;</a>
+                    <div class="dropdown-menu">
+                        <a href="products.html#smartphones">Smartphones</a>
+                        <a href="products.html#laptops">Laptops</a>
+                        <a href="products.html#wearables">Wearables</a>
+                        <a href="products.html#accessories">Accessories</a>
+                        <a href="products.html#cameras">Cameras</a>
+                        <a href="products.html#gaming">Gaming</a>
+                        <a href="products.html#home-and-kitchen">Home & Kitchen</a>
+                        <a href="products.html#car-and-vehicles-electronics">Car & Vehicle Electronics</a>
+                        <a href="products.html#audio-and-video">Audio & Video</a>
+                        <a href="products.html#service-plans">Service Plans</a>
+                    </div>
+                </li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="cart.html" class="cart-link">Cart (<span id="cart-count">0</span>)</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="help.html">Help</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+            <div class="hero-container">
+                <h1>Welcome to LEOBEN TECHNOLOGIES, Help Center</h1>
+                <p>Any questions you have can be communicated to us through our support email</p>
+            </div>
+        </section>
+
+    <div class="container">
+        <h1>Help & Frequently Asked Questions</h1>
+        
+        <section>
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq">
+                <div class="faq-question">How do I place an order?</div>
+                <div>Browse our products, add items to your cart, and proceed to checkout. Follow the on-screen instructions to complete 
+                    your purchase.
+                </div>
+            </div>
+            <div class="faq">
+                <div class="faq-question">What payment methods do you accept?</div>
+                <div>We accept credit/debit cards, PayPal, and other secure payment options listed at checkout.</div>
+            </div>
+            <div class="faq">
+                <div class="faq-question">How can I track my order?</div>
+                <div>After your order is shipped, you will receive a tracking number via email. Use it to track your shipment on the 
+                    courier's website.
+                </div>
+            </div>
+            <div class="faq">
+                <div class="faq-question">Can I return or exchange a product?</div>
+                <div>Yes, you can return or exchange products within 14 days of delivery. Please see our <a href="contact.html">Returns 
+                    Policy</a> for details.
+                </div>
+            </div>
+            <div class="faq">
+                <div class="faq-question">Who do I contact for support?</div>
+                <div>Contact our support team at <a href="mailto:support@leobentechnologies.com">support@leobentechnologies.com</a> or use 
+                    the contact form on our <a href="contact.html">Contact Us</a> page.
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Shopping Tips</h2>
+            <ul>
+                <li>Compare product features and reviews before making a purchase.</li>
+                <li>Look out for seasonal discounts and bundle offers.</li>
+                <li>Check product warranty and return policies.</li>
+                <li>Sign up for our newsletter to receive exclusive deals.</li>
+                <li>Use secure payment methods and avoid sharing sensitive information.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Gadget & Electronics Care Advice</h2>
+            <ul>
+                <li>Keep your devices clean and dry. Use a microfiber cloth for screens.</li>
+                <li>Avoid overcharging batteries to extend their lifespan.</li>
+                <li>Install software updates regularly for security and performance.</li>
+                <li>Use protective cases and screen guards to prevent damage.</li>
+                <li>Back up important data to cloud storage or external drives.</li>
+                <li>Store electronics in a cool, dry place away from direct sunlight.</li>
+            </ul>
+        </section>
+    </div>
+
+    <!-- Testimonials Section -->
+        <section class="testimonials">
+            <div class="container">
+                <h2 class="section-title">What Our Customers Say</h2>
+                <div class="testimonial-slider">
+                    <div class="testimonial">
+                        <p class="testimonial-text">"LEOBEN TECHNOLOGIES has the best customer service I've ever experienced. My laptop 
+                            arrived damaged, and they sent a replacement overnight with no hassle!"
+                        </p>
+                        <p class="testimonial-author">- Mr. Gbenga Adeolu, Abuja</p>
+                    </div>
+                    <div class="testimonial">
+                        <p class="testimonial-text">"The quality of products from LEOBEN is outstanding. I've purchased multiple items 
+                            and each one has exceeded my expectations."
+                        </p>
+                        <p class="testimonial-author">- Mrs. Chinaza Okili, Accra</p>
+                    </div>
+                    <div class="testimonial">
+                        <p class="testimonial-text">"Fast shipping and great prices. I'll definitely be shopping here again for all my 
+                            tech needs."
+                        </p>
+                        <p class="testimonial-author">- Dr. Isaiah Maxwell, Nairobi</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Newsletter Section -->
+        <section class="newsletter">
+            <div class="container">
+                <h2>Subscribe to Our Newsletter</h2>
+                <p>Stay updated with our latest products, exclusive deals, and tech news.</p>
+                <form class="newsletter-form">
+                    <input type="text" placeholder="Your full name" required>
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit" class="btn">Subscribe</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-column">
+                    <h3>Shop</h3>
+                    <ul>
+                        <li><a href="products.html">All Products</a></li>
+                        <li><a href="index.html">New Arrivals</a></li>
+                        <li><a href="products.html">Deals</a></li>
+                        <li><a href="products.html#service-plans">Service Plans</a></li>
+                        <li><a href="products.html#gift-cards">Gift Cards</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="help.html">FAQs</a></li>
+                        <li><a href="cart.html">Shipping</a></li>
+                        <li><a href="help.html">Returns & Exchanges</a></li>
+                        <li><a href="help.html">Product Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Careers</a></li>
+                        <li><a href="about.html">Sustainability</a></li>
+                        <li><a href="blog.html">Press</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Connect With Us</h3>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/LeobenTechnologies" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.tiktok.com/@leobentechnologies" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://www.instagram.com/leobentechnologies/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/leobentechnologies/" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.twitter.com/leobentech" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                    <h3 style="margin-top: 20px;">Contact Info</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 88, Adeniran Sam Str, Liveland City, Nigeria</p>
+                    <p><i class="fas fa-phone"></i> +234 260-890-4433</p>
+                    <p><i class="fas fa-envelope"></i> info.leobentech@example.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 LEOBEN TECHNOLOGIES. All rights reserved. | <a href="about.html">Privacy Policy</a> | <a href="index.html">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+    
+</body>
+</html>

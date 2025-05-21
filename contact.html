@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEOBEN TECHNOLOGIES - Contact Us</title>
+    <meta name="description" content="Contact page for LEOBEN TECHNOLOGIES">
+    <meta name="keywords" content="LEOBEN TECHNOLOGIES, contact, support">
+    <meta name="author" content="Emma Aima Leoben">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        /* Main Contact Layout */
+        .contact-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            justify-content: center;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* Form Container Styles */
+        .contact-section {
+            flex: 1;
+            min-width: 300px;
+            max-width: 600px;
+            margin: 20px 0;
+            padding: 30px;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .contact-section h2 {
+            text-align: center;
+            color: #2c3e50;
+            font-size: 2.2rem;
+            margin-bottom: 30px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .contact-section h2:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, #3498db, #9b59b6);
+            border-radius: 2px;
+        }
+        
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .contact-form label {
+            font-weight: 600;
+            color: #34495e;
+            font-size: 1rem;
+        }
+        
+        .contact-form input,
+        .contact-form textarea {
+            padding: 14px 16px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            background-color: #f9f9f9;
+        }
+        
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            border-color: #3498db;
+            box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+            outline: none;
+            background-color: #fff;
+        }
+        
+        .contact-form textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        
+        .submit-btn {
+            background: linear-gradient(135deg, #3498db, #9b59b6);
+            color: white;
+            border: none;
+            padding: 16px 32px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(52, 152, 219, 0.3);
+            background: linear-gradient(135deg, #2980b9, #8e44ad);
+        }
+        
+        /* Contact Info Section */
+        .info-section {
+            flex: 1;
+            min-width: 300px;
+            max-width: 600px;
+            margin: 20px 0;
+            padding: 30px;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .info-section h2 {
+            text-align: justify;
+            color: #2c3e50;
+            font-size: 2.2rem;
+            margin-bottom: 30px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .info-section h2:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, #3498db, #9b59b6);
+            border-radius: 2px;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+        
+        .contact-method {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+        
+        .contact-icon {
+            font-size: 1.5rem;
+            min-width: 40px;
+            text-align: center;
+            padding-top: 5px;
+        }
+        
+        .contact-details h3 {
+            margin: 0 0 5px 0;
+            color: #2c3e50;
+            text-align: justify;
+        }
+        
+        .contact-details p, 
+        .contact-details a {
+            margin: 0;
+            color: #7f8c8d;
+            text-decoration: none;
+            transition: color 0.3s;
+            text-align: justify;
+        }
+        
+        .contact-details a:hover {
+            color: #3498db;
+        }
+        
+        /* Newsletter Section */
+        .newsletter {
+            background: linear-gradient(rgba(129, 154, 236, 0.9), rgba(196, 209, 252, 0.9)), url('https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+            color: var(--white);
+            text-align: center;
+            padding: 80px 20px;
+        }
+        
+        .newsletter h2 {
+            margin-bottom: 20px;
+        }
+        
+        .newsletter p {
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+        
+        .newsletter-form {
+            display: flex;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
+        .newsletter-form input {
+            flex: 1;
+            padding: 12px 15px;
+            border: none;
+            border-radius: 4px 0 0 4px;
+        }
+        
+        .newsletter-form button {
+            border-radius: 0 4px 4px 0;
+            background: var(--dark-color);
+        }
+        
+        .newsletter-form button:hover {
+            background: #1a252f;
+        }
+        
+        /* Footer Styles */
+        .main-footer {
+            background-color: var(--dark-color);
+            color: var(--white);
+            padding: 60px 0 20px;
+        }
+        
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+            color:rgba(25, 243, 243, 0.63);
+            text-align: center;
+        }
+        
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background: #e0e0e0;
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-column a {
+            color: #ecf0f1;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .footer-column a:hover {
+            color: var(--primary-color);
+            padding-left: 5px;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(3, 92, 114, 0.589);
+            border-radius: 50%;
+            transition: var(--transition);
+        }
+        
+        .social-links a:hover {
+            background: var(--primary-color);
+            transform: translateY(-3px);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(25, 243, 243, 0.63);
+            color:rgba(0, 0, 0, 0.1);
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .contact-section, 
+            .info-section {
+                padding: 20px;
+                margin: 10px;
+            }
+            
+            .contact-section h2,
+            .info-section h2 {
+                font-size: 1.8rem;
+            }
+            
+            .submit-btn {
+                padding: 14px 24px;
+            }
+            
+            .contact-method {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            
+            .contact-icon {
+                padding-top: 0;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .contact-section h2,
+            .info-section h2 {
+                font-size: 1.5rem;
+            }
+            
+            .contact-form input,
+            .contact-form textarea {
+                padding: 12px 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo-container">
+                <img src="LT.jpg" alt="LEOBEN TECHNOLOGIES Logo" class="site-logo">
+                <h1 class="logo">LEOBEN TECHNOLOGIES</h1>
+            </div>
+            
+            <nav class="main-nav">
+                <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown-container">
+                        <a href="products.html" class="dropdown-trigger">Products &#9662;</a>
+                        <div class="dropdown-menu">
+                            <a href="products.html#smartphones">Smartphones</a>
+                            <a href="products.html#laptops">Laptops</a>
+                            <a href="products.html#wearables">Wearables</a>
+                            <a href="products.html#accessories">Accessories</a>
+                            <a href="products.html#cameras">Cameras</a>
+                            <a href="products.html#gaming">Gaming</a>
+                            <a href="products.html#home-and-kitchen">Home & Kitchen</a>
+                            <a href="products.html#car-and-vehicles-electronics">Car & Vehicle Electronics</a>
+                            <a href="products.html#audio-and-video">Audio & Video</a>
+                            <a href="products.html#service-plans">Service Plans</a>
+                        </div>
+                    </li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                    <li><a href="cart.html" class="cart-link">Cart (<span id="cart-count">0</span>)</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="help.html">Help</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-container">
+            <h1>Contact Us</h1>
+            <p>We'd love to hear from you! If you have any questions, comments, or feedback, please reach out.</p>
+        </div>
+    </section>
+
+    <main class="container">
+        <div class="contact-content">
+            <section class="contact-section">
+                <h2>Get in Touch With Us!</h2>
+                <form class="contact-form" action="contact.html" method="post">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Subject:</label>
+                        <input type="text" id="subject" name="subject" placeholder="What's this about?" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" placeholder="Type your message here..." required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </section>
+            
+            <section class="info-section">
+                <h2>Contact Information</h2>
+                <div class="contact-info">
+                    <div class="contact-method">
+                        <div class="contact-icon">📍</div>
+                        <div class="contact-details">
+                            <h3>Address</h3>
+                            <p>88, Adeniran Sam Str, Liveland City, Nigeria</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <div class="contact-icon">✉️</div>
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <a href="mailto:info.leobentech@example.com">info.leobentech@example.com</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <div class="contact-icon">📞</div>
+                        <div class="contact-details">
+                            <h3>Phone</h3>
+                            <a href="tel:+2342608904433">+234 260-890-4433</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <div class="contact-icon">🕒</div>
+                        <div class="contact-details">
+                            <h3>Business Hours</h3>
+                            <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+                            <p>Saturday: 10:00 AM - 4:00 PM</p>
+                            <p>Sunday: Closed (Strictly Online)</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+     <!-- Newsletter Section -->
+        <section class="newsletter">
+            <div class="container">
+                <h2>Subscribe to Our Newsletter</h2>
+                <p>Stay updated with our latest products, exclusive deals, and tech news.</p>
+                <form class="newsletter-form">
+                    <input type="text" placeholder="Your full name" required>
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit" class="btn">Subscribe</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-column">
+                    <h3>Shop</h3>
+                    <ul>
+                        <li><a href="products.html">All Products</a></li>
+                        <li><a href="index.html">New Arrivals</a></li>
+                        <li><a href="products.html">Deals</a></li>
+                        <li><a href="about.html">Service Plans</a></li>
+                        <li><a href="contact.html">Gift Cards</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="help.html">FAQs</a></li>
+                        <li><a href="help.html">Shipping</a></li>
+                        <li><a href="contact.html">Returns & Exchanges</a></li>
+                        <li><a href="help.html">Product Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="about.html">Careers</a></li>
+                        <li><a href="about.html">Sustainability</a></li>
+                        <li><a href="blog.html">Press</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Connect With Us</h3>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/LeobenTechnologies" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.tiktok.com/@leobentechnologies" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://www.instagram.com/leobentechnologies/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/leobentechnologies/" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.twitter.com/leobentech" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                    <h3 style="margin-top: 20px;">Contact Info</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 88, Adeniran Sam Str, Liveland City, Nigeria</p>
+                    <p><i class="fas fa-phone"></i> +234 260-890-4433</p>
+                    <p><i class="fas fa-envelope"></i> info.leobentech@example.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 LEOBEN TECHNOLOGIES. All rights reserved. | <a href="about.html">Privacy Policy</a> | <a href="index.html">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>

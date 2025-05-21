@@ -1,0 +1,1401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - LEOBEN TECHNOLOGIES</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Base Styles */
+        :root {
+            --primary-color: #4c6cd8;
+            --secondary-color: #3faab8;
+            --accent-color: #5b75e9;
+            --dark-color: #2c3e50;
+            --light-color: #f8f9fa;
+            --text-color: #333;
+            --text-light: #555;
+            --white: #fff;
+            --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--light-color);
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4 {
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: var(--primary-color);
+            color: var(--white);
+            border: none;
+            padding: 12px 25px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: var(--transition);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 14px;
+        }
+        
+        .btn:hover {
+            background: var(--secondary-color);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 2.5rem;
+            color: var(--dark-color);
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--primary-color);
+            border-radius: 2px;
+        }
+        
+        /* Header Styles */
+        .main-header {
+            background-color: var(--white);
+            box-shadow: var(--shadow);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: var(--transition);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .site-logo {
+            height: 50px;
+            width: auto;
+            transition: var(--transition);
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--dark-color);
+        }
+        
+        .main-nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+        
+        .main-nav a {
+            font-weight: 600;
+            position: relative;
+            padding: 5px 0;
+        }
+        
+        .main-nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-color);
+            transition: var(--transition);
+        }
+        
+        .main-nav a:hover::after,
+        .main-nav a.active::after {
+            width: 100%;
+        }
+        
+        .cart-link {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+            margin-top: 80px;
+            animation: fadeIn 1s ease-in-out;
+        }
+        
+        .hero-container h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            animation: slideInDown 1s ease-in-out;
+        }
+        
+        .hero-container p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            animation: slideInUp 1s ease-in-out;
+        }
+        
+        /* About Section */
+        .about-section {
+            padding: 80px 0;
+            background-color: rgb(189, 236, 248);
+        }
+        
+        .about-container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 50px;
+        }
+        
+        .about-content {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .about-text h2 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            color: var(--dark-color);
+        }
+        
+        .about-text p {
+            margin-bottom: 20px;
+            color: var(--text-light);
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .about-image {
+            flex: 1;
+            min-width: 300px;
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
+        }
+        
+        .about-image:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: var(--transition);
+        }
+        
+        .about-image:hover img {
+            transform: scale(1.05);
+        }
+        
+        .mission-vision {
+            padding: 80px 0;
+            background-color: rgb(198, 241, 238);
+        }
+        
+        .mv-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        
+        .mv-card {
+            flex: 1;
+            min-width: 300px;
+            background: var(--white);
+            padding: 40px 30px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            text-align: center;
+        }
+        
+        .mv-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .mv-card i {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        
+        .mv-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--dark-color);
+        }
+        
+        .mv-card p {
+            color: var(--text-light);
+        }
+        
+        /* Team Section */
+        .team-section {
+            padding: 80px 0;
+            background-color: rgb(148, 190, 207);
+        }
+        
+        .team-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .team-member {
+            background: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            text-align: center;
+        }
+        
+        .team-member:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .member-image {
+            height: 250px;
+            overflow: hidden;
+        }
+        
+        .member-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .team-member:hover .member-image img {
+            transform: scale(1.1);
+        }
+        
+        .member-info {
+            padding: 25px 20px;
+        }
+        
+        .member-info h3 {
+            font-size: 1.3rem;
+            margin-bottom: 5px;
+        }
+        
+        .member-info p {
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        
+        .social-links a {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            background: var(--light-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+        
+        .social-links a:hover {
+            background: var(--primary-color);
+            color: var(--white);
+        }
+        
+        /* Stats Section */
+        .stats-section {
+            padding: 80px 0;
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+            color: var(--white);
+            text-align: center;
+        }
+        
+        .stats-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 30px;
+        }
+        
+        .stat-item {
+            flex: 1;
+            min-width: 200px;
+            padding: 30px;
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+        
+        .stat-text {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        /* Footer Styles */
+        .main-footer {
+            background-color: var(--dark-color);
+            color: var(--white);
+            padding: 60px 0 20px;
+        }
+        
+        .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 50px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column {
+            flex: 1;
+            min-width: 250px;
+        }
+        
+        .footer-column h2 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-column h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background: var(--primary-color);
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-column a:hover {
+            color: var(--primary-color);
+            padding-left: 5px;
+        }
+        
+        .footer-logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .footer-logo {
+            height: 40px;
+            width: auto;
+        }
+        
+        .footer-logo-text {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        
+        .newsletter-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .newsletter-form input {
+            padding: 12px 15px;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+        
+        .social-links-footer {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links-footer a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+        
+        .social-links-footer a:hover {
+            background: var(--primary-color);
+            transform: translateY(-5px);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes slideInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .hero-container h1 {
+                font-size: 2.8rem;
+            }
+            
+            .section-title {
+                font-size: 2.2rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+            
+            .main-nav ul {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 80px);
+                background: var(--white);
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 30px;
+                transition: var(--transition);
+            }
+            
+            .main-nav ul.active {
+                left: 0;
+            }
+            
+            .hero {
+                height: 50vh;
+            }
+            
+            .hero-container h1 {
+                font-size: 2.2rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .about-container,
+            .mv-container {
+                flex-direction: column;
+            }
+            
+            .about-image {
+                order: -1;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero {
+                height: 40vh;
+            }
+            
+            .hero-container h1 {
+                font-size: 1.8rem;
+            }
+            
+            .section-title {
+                font-size: 1.6rem;
+            }
+            
+            .btn {
+                padding: 10px 20px;
+            }
+        }
+
+        /* Blog Header */
+        .blog-header {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+            height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+            margin-bottom: 60px;
+        }
+
+        .blog-header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            animation: fadeInDown 1s ease;
+        }
+
+        .blog-header p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+            animation: fadeInUp 1s ease;
+        }
+
+        /* Blog Posts Container */
+        .blog-container {
+            padding: 60px 0;
+        }
+
+        .blog-intro {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .blog-intro h2 {
+            font-size: 2.5rem;
+            color: var(--dark-color);
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .blog-intro h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--primary-color);
+            border-radius: 2px;
+        }
+
+        .blog-intro p {
+            color: var(--text-light);
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+        }
+
+        /* Blog Posts */
+        /* Blog Header */
+        .blog-header {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+            height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+            margin-bottom: 60px;
+        }
+
+        .blog-header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            animation: fadeInDown 1s ease;
+        }
+
+        .blog-header p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+            animation: fadeInUp 1s ease;
+        }
+
+        /* Blog Posts Container */
+        .blog-container {
+            padding: 60px 0;
+            color: rgb(206, 252, 236);
+        }
+
+        .blog-intro {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .blog-intro h2 {
+            font-size: 2.5rem;
+            color: var(--dark-color);
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .blog-intro h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--primary-color);
+            border-radius: 2px;
+        }
+
+        .blog-intro p {
+            color: var(--text-light);
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+        }
+
+        .blog-posts {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .blog-post {
+            background: rgb(173, 248, 244);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .blog-post.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .blog-post:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .post-image {
+            height: 250px;
+            overflow: hidden;
+        }
+
+        .post-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .blog-post:hover .post-image img {
+            transform: scale(1.1);
+        }
+
+        .post-content {
+            padding: 25px;
+        }
+
+        .post-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--dark-color);
+        }
+
+        .post-content p {
+            color: var(--text-light);
+            margin-bottom: 20px;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .post-content ul {
+            margin: 15px 0;
+            padding-left: 20px;
+            color: var(--text-light);
+        }
+
+        .post-content ul li {
+            margin-bottom: 8px;
+        }
+
+        .read-more {
+            display: inline-block;
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .read-more:hover {
+            background: var(--secondary-color);
+            transform: translateY(-3px);
+        }
+
+         /* Categories */
+        .blog-categories {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+
+        .category-btn {
+            padding: 8px 20px;
+            background: var(--white);
+            border: 1px solid var(--primary-color);
+            border-radius: 30px;
+            color: var(--primary-color);
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .category-btn:hover,
+        .category-btn.active {
+            background: var(--primary-color);
+            color: var(--white);
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .blog-header h1 {
+                font-size: 2.8rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .blog-header {
+                height: 40vh;
+            }
+            
+            .blog-header h1 {
+                font-size: 2.2rem;
+            }
+            
+            .blog-posts {
+                grid-template-columns: 1fr;
+            }
+            
+            .post-image {
+                height: 200px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .blog-header {
+                height: 30vh;
+            }
+            
+            .blog-header h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="header-container container">
+            <div class="logo-container">
+                <img src="LT.jpg" alt="LEOBEN TECHNOLOGIES Logo" class="site-logo">
+                <h1 class="logo">LEOBEN TECHNOLOGIES</h1>
+            </div>
+            
+            <nav class="main-nav">
+                <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown-container">
+                        <a href="products.html" class="dropdown-trigger">Products <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="products.html">Smartphones</a>
+                            <a href="products.html">Laptops</a>
+                            <a href="products.html">Wearables</a>
+                            <a href="products.html">Accessories</a>
+                            <a href="products.html">Accessories</a>
+                            <a href="products.html">Cameras</a>
+                            <a href="products.html">Gaming</a>
+                            <a href="products.html">Home & Kitchen</a>
+                            <a href="products.html">Car & Vehicle Electronics</a>
+                            <a href="products.html">Audio & Video</a>
+                            <a href="products.html">Service Plans</a>
+                        </div>
+                    </li>
+                    <li><a href="about.html" class="active">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="cart.html" class="cart-link"><i class="fas fa-shopping-cart"></i> (<span id="cart-count">0</span>)</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="help.html">Help</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container container">
+            <h1 class="animate__animated animate__fadeInDown">About LEOBEN TECHNOLOGIES</h1>
+            <p class="animate__animated animate__fadeInUp">Innovating the future of technology with sustainable solutions</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="container">
+            <div class="about-container animate-on-scroll">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2>Our Story</h2>
+                        <p>Welcome to LEOBEN TECHNOLOGIES, your premier destination for cutting-edge technology solutions. Founded in 2023 by 
+                            visionary entrepreneur Emma Aima Leoben, our company has rapidly grown from a small startup to a recognized leader 
+                            in the tech industry.
+                        </p>
+                        <p>What began as a passion project in a modest home office has blossomed into a thriving enterprise dedicated to 
+                            delivering innovative, eco-friendly technology products. We're committed to pushing boundaries while maintaining 
+                            our core values of sustainability, quality, and exceptional customer service.
+                        </p>
+                        <p>At LEOBEN TECHNOLOGIES, we believe technology should enhance lives without compromising our planet's future. That's 
+                            why we've implemented rigorous sustainability standards across our operations, from product design to packaging and 
+                            shipping.
+                        </p>
+                        <a href="contact.html" class="btn">Get in Touch</a>
+                    </div>
+                    <div class="about-image">
+                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="LEOBEN TECHNOLOGIES Team">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision Section -->
+    <section class="mission-vision">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">Our Core Values</h2>
+            <div class="mv-container">
+                <div class="mv-card animate-on-scroll">
+                    <i class="fas fa-bullseye"></i>
+                    <h3>Our Mission</h3>
+                    <p>To revolutionize the tech industry by providing innovative, sustainable solutions that enhance lives while 
+                        minimizing environmental impact through cutting-edge research and responsible business practices.
+                    </p>
+                </div>
+                <div class="mv-card animate-on-scroll" style="transition-delay: 0.2s">
+                    <i class="fas fa-eye"></i>
+                    <h3>Our Vision</h3>
+                    <p>To become the global leader in eco-conscious technology by 2030, setting new standards for sustainability and 
+                        innovation while maintaining uncompromising quality and customer satisfaction.
+                    </p>
+                </div>
+                <div class="mv-card animate-on-scroll" style="transition-delay: 0.4s">
+                    <i class="fas fa-hand-holding-heart"></i>
+                    <h3>Our Core Values</h3>
+                    <p>Sustainability, Innovation, Integrity, Customer Focus, and Continuous Improvement guide every decision we make 
+                        and every product we create at LEOBEN TECHNOLOGIES.
+                    </p>
+                </div>
+                <div class="mv-card animate-on-scroll" style="transition-delay: 0.25">
+                    <i class="fas fa-box-open"></i>
+                    <h3>Our Products</h3>
+                    <p>We offer a diverse range of innovative, high-quality tech products designed to meet the evolving needs of our 
+                        customers while prioritizing sustainability and user experience.
+                    </p>
+                </div>
+                <div class="mv-card animate-on-scroll" style="transition-delay: 0.4s">
+                    <i class="fas fa-users"></i>
+                    <h3>Our Team</h3>
+                    <p>Our talented, diverse team is the driving force behind our success, working collaboratively to deliver outstanding 
+                        results and foster a culture of innovation and respect.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">Meet Our Leadership</h2>
+            <div class="team-container">
+                <div class="team-member animate-on-scroll">
+                    <div class="member-image">
+                        <img src="Aima.jpg" alt="Emma Aima Leoben">
+                    </div>
+                    <div class="member-info">
+                        <h3>Engr. Emma Aima Leoben</h3>
+                        <p>Founder & CEO</p>
+                        <p>Miss. Emma Aima Leoben is our CEO and one of the greatest masterminds in piroting this organization. She was inspired and 
+                        dedicated to making our society more sustainable and safe for people of all ages to live in. She is a Software Engineer,
+                        an IT Consultant and a Life Coach. Since this organization has been established, she has gone out of her way to ensure only 
+                        quality products are being showcased and delivered to customers across Africa.
+                        </p>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/emmaaimaleoben/"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.instagram.com/@emma_aima"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/Emmaaimaleogbentech"><i class="fab fa-linkedin"></i></a>
+                            <a href="mailto:www.emmaaimaleobentech@example.org"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-member animate-on-scroll" style="transition-delay: 0.2s">
+                    <div class="member-image">
+                        <img src="Bolu.jpg" alt="Boluwatife Agboola">
+                    </div>
+                    <div class="member-info">
+                        <h3>Dr. Boluwatife Agboola</h3>
+                        <p>Chief Operating Officer</p>
+                        <p>Miss. Boluwatife Agboola is our ever-dedicated team leader who is present for meetings, brainstorming sessions and even for 
+                        team evaluation support. She is very dedicated to her work as an operative officer. She brings charisma, loudable ideas and 
+                        suggestions to the team for effective decision making. She is a Financial Data Analyst and an International Relations Officer by 
+                        profession.
+                        </p>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/boluwatifeagboola/"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.instagram.com/@b.agboola"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/BoluAgboola.leogbentech"><i class="fab fa-linkedin"></i></a>
+                            <a href="mailto:www.agboolaboluleobentech@example.org"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-member animate-on-scroll" style="transition-delay: 0.4s">
+                    <div class="member-image">
+                        <img src="Dammey.jpeg" alt="Mr. Dammey">
+                    </div>
+                    <div class="member-info">
+                        <h3>Engr. Damilola Emmanuel Adejube</h3>
+                        <p>Chief Technical Officer</p>
+                        <p>Mr. Damilola Adejube is a passionate engineer in tech and software assembling. He has worked with the organization since its prime.
+                        His expertise spans hardware troubleshooting, software development, and network infrastructure. Mr. Dammey is known for his innovative solutions 
+                        and dedication to keeping our technology running smoothly. He is always ready to assist team members and ensures that our products meet the highest 
+                        technical standards.
+                        </p>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/dammeyadejube/"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.instagram.com/@dammeytech"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/DamilolaEleogbentech"><i class="fab fa-linkedin"></i></a>
+                            <a href="mailto:www.dammeytechleobentech@example.org"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-member animate-on-scroll" style="transition-delay: 0.6s">
+                    <div class="member-image">
+                        <img src="Alice2.jpg" alt="Miss. Alice Akogwu">
+                    </div>
+                    <div class="member-info">
+                        <h3>Dr. Alice Akogwu</h3>
+                        <p>Chief Marketing Officer</p>
+                        <p>Miss. Alice Akogwu is an amazing and well-read woman who prioritizes her duties on point. She is responsible for developing and executing marketing 
+                        strategies that drive brand awareness and customer engagement. Alice is skilled in digital marketing, market research, and public relations. She leads 
+                        the marketing team in organizing campaigns, managing social media presence, and building strong relationships with customers and partners. Her creativity 
+                        and analytical skills have contributed significantly to the growth and visibility of LEOBEN TECHNOLOGIES across Africa.
+                        </p>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/aliceakogwu/"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.instagram.com/@alice.akogwu"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/AliceAkogwu.leogbentech"><i class="fab fa-linkedin"></i></a>
+                            <a href="mailto:www.aliceakogwuleobentech@example.org"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- Blog Header -->
+    <header class="blog-header">
+        <div class="container">
+            <h1>LEOBEN TECH BLOG</h1>
+            <p>Discover the latest innovations, product reviews, and tech insights from our experts</p>
+        </div>
+    </header>
+
+    <!-- Blog Container -->
+    <section class="blog-container">
+        <div class="container">
+            <div class="blog-intro animate__animated animate__fadeIn">
+                <h2>Latest Blog Posts</h2>
+                <p>Stay updated with cutting-edge technology trends and product innovations from LEOBEN TECHNOLOGIES</p>
+            </div>
+
+            <!-- Categories -->
+            <div class="blog-categories">
+                <button class="category-btn active">All</button>
+                <button class="category-btn">Wearables</button>
+                <button class="category-btn">Computing</button>
+                <button class="category-btn">Accessories</button>
+                <button class="category-btn">Sustainability</button>
+            </div>
+
+            <!-- Blog Posts -->
+            <div class="blog-posts">
+                <!-- AR Glasses -->
+                <article class="blog-post">
+                    <div class="post-image">
+                        <img src="https://irp.cdn-website.com/77106691/dms3rep/multi/Smart-Digital-Glasses.jpg" alt="Augmented Reality Glasses">
+                    </div>
+                    <div class="post-content">
+                        <h3>Augmented Reality Glasses</h3>
+                        <p>AR (Augmented Reality) glasses are wearable devices that overlay digital information—such as images, text, or 3D models—onto the real world through transparent lenses. In today's world, AR glasses are used for navigation, real-time translation, hands-free work instructions, immersive gaming, education, remote assistance, and enhancing shopping experiences by blending digital content with the user's physical environment.</p>
+                        <a href="blog.html" class="read-more">Read More</a>
+                    </div>
+                </article>
+
+                <!-- VR Glasses -->
+                <article class="blog-post">
+                    <div class="post-image">
+                        <img src="https://static.independent.co.uk/2023/01/24/15/Apple%20Reality%20Pro%20headset%20Indybest%20copy.jpg" alt="Virtual Reality Glasses">
+                    </div>
+                    <div class="post-content">
+                        <h3>Virtual Reality Glasses</h3>
+                        <p>VR (Virtual Reality) glasses are wearable devices that immerse users in a fully digital, computer-generated environment, blocking out the real world. They use screens or lenses to display 3D visuals and often include sensors for head tracking. In today's world, VR glasses are used for immersive gaming, virtual tours, training simulations, education, remote collaboration, therapy, and entertainment.</p>
+                        <a href="index.html" class="read-more">Read More</a>
+                    </div>
+                </article>
+
+                <!-- SpaceTop G1 -->
+                <article class="blog-post">
+                    <div class="post-image">
+                        <img src="https://i.pcmag.com/imagery/articles/05a8nsnJijW1dxpWlgUIgoO-1..v1716922601.jpg" alt="Spacetop G1 Laptop">
+                    </div>
+                    <div class="post-content">
+                        <h3>SpaceTop G1 Screenless Laptop</h3>
+                        <p>A screenless laptop, such as the SpaceTop G1, is a computing device that replaces the traditional physical display with augmented reality (AR) or virtual reality (VR) technology. Instead of a built-in screen, it projects a virtual workspace into the user's field of view using specialized glasses or headsets.</p>
+                        <ul>
+                            <li>Projects multiple virtual screens or workspaces</li>
+                            <li>Enables hands-free interaction in AR</li>
+                            <li>Enhances privacy with display only visible to user</li>
+                        </ul>
+                        <a href="products.html" class="read-more">Read More</a>
+                    </div>
+                </article>
+
+                <!-- Machenike KT84 -->
+                <article class="blog-post">
+                    <div class="post-image">
+                        <img src="https://i.shgcdn.com/c579936d-3353-4bd2-bc30-2f0eabce56e3/-/format/auto/-/preview/3000x3000/-/quality/best/" alt="Machnike KT84">
+                    </div>
+                    <div class="post-content">
+                        <h3>Machenike KT84</h3>
+                        <p>This retro-style keyboard features see-through keys with LED lighting, offering a solid base with customizable RGB lighting, hot-swappable switches, and a compact 84-key layout. Popular among gamers, programmers, and creative professionals for its tactile feedback and durability.</p>
+                        <ul>
+                            <li>Customizable RGB lighting effects</li>
+                            <li>Hot-swappable mechanical switches</li>
+                            <li>Wireless connectivity for multiple devices</li>
+                        </ul>
+                        <a href="index.html" class="read-more">Read More</a>
+                    </div>
+                </article>
+
+                <!-- Pocket Cloud -->
+                <article class="blog-post">
+                    <div class="post-image">
+                        <img src="https://nascompares.com/wp-content/uploads/2025/01/Firefly-Mobile-NAS-Station-PC-CES-2025-Stand-stock-35-scaled.webp" alt="Pocket Cloud Docking Station">
+                    </div>
+                    <div class="post-content">
+                        <h3>Pocket Cloud</h3>
+                        <p>A wireless mobile docking station and powerstick that connects multiple devices for charging, data transfer, and wireless display. Enables seamless file sharing, cloud storage access, and device synchronization on the go.</p>
+                        <ul>
+                            <li>Portable hub for multiple devices</li>
+                            <li>Wireless file transfers and backups</li>
+                            <li>Cloud storage access from anywhere</li>
+                            <li>Wireless screen mirroring capability</li>
+                        </ul>
+                        <a href="blog.html" class="read-more">Read More</a>
+                    </div>
+                </article>
+
+                <!-- Dex Pole -->
+                <article class="blog-post">
+                    <div class="post-image">
+                        <img src="https://worldkings.org/userfiles/upload/_thumbs/images/modules/news/2022/11/29/0_DEXPOLE-9.png" alt="Dex Pole Solar Powerbank">
+                    </div>
+                    <div class="post-content">
+                        <h3>Dex Pole</h3>
+                        <p>A solar-powered power bank for eco-conscious users needing reliable, portable energy. Features high-capacity batteries, multiple USB ports, and integrated solar panels that recharge using sunlight. Ideal for outdoor enthusiasts and travelers.</p>
+                        <ul>
+                            <li>Solar charging for off-grid use</li>
+                            <li>Fast-charging USB/USB-C ports</li>
+                            <li>Weather-resistant durable design</li>
+                            <li>Built-in emergency flashlight</li>
+                        </ul>
+                        <a href="products.html" class="read-more">Read More</a>
+                    </div>
+                </article>
+
+                <!-- Additional Post - Smart Home Hub -->
+                <article class="blog-post">
+                    <div class="post-image">
+                        <img src="https://images.unsplash.com/photo-1558002038-1055907df827?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Smart Home Hub">
+                    </div>
+                    <div class="post-content">
+                        <h3>Next-Gen Smart Home Hub</h3>
+                        <p>The future of home automation is here with our AI-powered smart home hub that learns your routines and preferences to create the perfect living environment. Control lighting, temperature, security, and entertainment with voice commands or through our intuitive app.</p>
+                        <ul>
+                            <li>Seamless integration with 1000+ devices</li>
+                            <li>AI-powered automation and suggestions</li>
+                            <li>Military-grade encryption for security</li>
+                            <li>Energy usage monitoring and optimization</li>
+                        </ul>
+                        <a href="blog.html" class="read-more">Read More</a>
+                    </div>
+                </article>
+
+                <!-- Additional Post - Foldable Phone -->
+                <article class="blog-post">
+                    <div class="post-image">
+                        <img src="https://cdn.thewirecutter.com/wp-content/media/2024/12/flipphones-2048px-00198.jpg" alt="Foldable Smartphone">
+                    </div>
+                    <div class="post-content">
+                        <h3>The Future of Foldable Phones</h3>
+                        <p>Foldable smartphones are revolutionizing mobile technology, offering tablet-sized screens that fold into pocket-friendly devices. With improved durability and innovative hinge designs, these devices are becoming mainstream, offering unparalleled multitasking capabilities.</p>
+                        <ul>
+                            <li>Seamless transition between phone and tablet modes</li>
+                            <li>Multi-active window for true multitasking</li>
+                            <li>Ultra-thin flexible glass displays</li>
+                            <li>Enhanced productivity apps optimized for large screens</li>
+                        </ul>
+                        <a href="products.html" class="read-more">Read More</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">By The Numbers</h2>
+            <div class="stats-container">
+                <div class="stat-item animate-on-scroll">
+                    <div class="stat-number" data-count="150">0</div>
+                    <div class="stat-text">Happy Clients</div>
+                </div>
+                <div class="stat-item animate-on-scroll" style="transition-delay: 0.2s">
+                    <div class="stat-number" data-count="30">0</div>
+                    <div class="stat-text">Innovative Products</div>
+                </div>
+                <div class="stat-item animate-on-scroll" style="transition-delay: 0.4s">
+                    <div class="stat-number" data-count="8">0</div>
+                    <div class="stat-text">Industry Awards</div>
+                </div>
+                <div class="stat-item animate-on-scroll" style="transition-delay: 0.6s">
+                    <div class="stat-number" data-count="95">0</div>
+                    <div class="stat-text">% Satisfaction</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-column">
+                    <div class="footer-logo-container">
+                        <img src="LT.jpg" alt="LEOBEN TECHNOLOGIES Logo" class="footer-logo">
+                        <h2 class="footer-logo-text">LEOBEN TECHNOLOGIES</h2>
+                    </div>
+                    <p>Innovating the future with sustainable technology solutions that make a difference.</p>
+                    <div class="social-links-footer">
+                        <a href="https://www.facebook.com/LeobenTechnologies"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.tiktok.com/@leobentechnologies"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/leobentechnologies/"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/leobentechnologies/"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.twitter.com/leobentech"><i class="fab fa-youtube"></i></a>
+                    </div>
+                    <h3 style="margin-top: 20px;">Contact Info</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 88, Adeniran Sam Str, Liveland City, Nigeria</p>
+                    <p><i class="fas fa-phone"></i> +234 260-890-4433</p>
+                    <p><i class="fas fa-envelope"></i> info.leobentech@example.com</p>
+                </div>
+                <div class="footer-column">
+                    <h2>Quick Links</h2>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h2>Support</h2>
+                    <ul>
+                        <li><a href="help.html">FAQs</a></li>
+                        <li><a href="cart.html">Shipping Policy</a></li>
+                        <li><a href="help.html">Returns & Refunds</a></li>
+                        <li><a href="help.html">Technical Support</a></li>
+                        <li><a href="contact.html">Feedback</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h2>Newsletter</h2>
+                    <p>Subscribe to our newsletter for the latest updates and offers.</p>
+                    <form class="newsletter-form">
+                        <input type="text" placeholder="Your Full Name" required>
+                        <input type="email" placeholder="Your Email" required>
+                        <button type="submit" class="btn">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 LEOBEN TECHNOLOGIES. All Rights Reserved. | <a href="about.html">Privacy Policy</a> | <a href="index.html">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+       
+</body>
+</html>

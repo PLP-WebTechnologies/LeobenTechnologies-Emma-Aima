@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEOBEN TECHNOLOGIES - Latest Gadgets and Electronics</title>
+    <meta name="author" content="Emma Aima Leoben">
+    <meta name="description" content="Explore the latest gadgets and electronics in the market.">
+    <meta name="keywords" content="gadgets, electronics, technology, reviews">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+    /* Dropdown Styles */
+.dropdown-container {
+    position: relative;
+    display: inline-block; /* Ensures proper positioning */
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    padding: 10px 0; /* Better padding structure */
+    min-width: 200px;
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    z-index: 1000;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin-top: 5px; /* Small gap from trigger */
+}
+
+/* Show dropdown on hover AND focus (for accessibility) */
+.dropdown-container:hover .dropdown-menu,
+.dropdown-container:focus-within .dropdown-menu,
+.dropdown-menu.show { /* Added show class for JavaScript control */
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.dropdown-menu a {
+    padding: 10px 16px;
+    border-radius: 4px;
+    color: #333;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+    font-size: 14px;
+}
+
+.dropdown-menu a:hover,
+.dropdown-menu a:focus {
+    background: rgba(76, 108, 216, 0.1);
+    color: #1a3fd9;
+    outline: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .dropdown-menu {
+        position: static; /* Stack on mobile */
+        width: 100%;
+        box-shadow: none;
+        border: 1px solid #eee;
+        margin-top: 8px;
+    }
+    
+    .dropdown-container {
+        display: block; /* Full width on mobile */
+        width: 100%;
+    }
+}
+
+/* Accessibility improvements */
+.dropdown-menu a:focus {
+    background: rgba(76, 108, 216, 0.2);
+}
+    
+    /* Blog Page Styles */
+    .blog-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 30px 20px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    .blog-header {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    
+    .blog-header h2 {
+        font-size: 32px;
+        color: #2c3e50;
+        margin-bottom: 10px;
+    }
+    
+    .blog-header p {
+        color: #7f8c8d;
+        font-size: 16px;
+    }
+    
+    .blog-posts {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        justify-content: center;
+    }
+    
+    .blog-post {
+        flex: 1;
+        min-width: 250px;
+        max-width: 350px;
+        background: white;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .blog-post:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+    
+    .post-image {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+    }
+    
+    .post-content {
+        padding: 20px;
+    }
+    
+    .post-meta {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 15px;
+        font-size: 14px;
+        color: #7f8c8d;
+    }
+    
+    .post-author {
+        font-weight: 600;
+        color: #3498db;
+    }
+    
+    .post-date {
+        font-style: italic;
+    }
+    
+    .post-content h3 {
+        font-size: 22px;
+        color: #2c3e50;
+        margin-bottom: 15px;
+        line-height: 1.3;
+    }
+    
+    .post-content p {
+        color: #34495e;
+        line-height: 1.6;
+        margin-bottom: 20px;
+    }
+    
+    .read-more {
+        display: inline-block;
+        padding: 8px 20px;
+        background: #3498db;
+        color: white;
+        text-decoration: none;
+        border-radius: 4px;
+        font-weight: 500;
+        transition: background 0.3s ease;
+    }
+    
+    .read-more:hover {
+        background: #2980b9;
+    }
+    
+    @media (max-width: 900px) {
+        .blog-post {
+            min-width: calc(50% - 30px);
+        }
+    }
+    
+    @media (max-width: 600px) {
+        .blog-post {
+            min-width: 100%;
+        }
+    }
+
+    /* Testimonials Section */
+        .testimonials {
+            background-color: #c3eff5;
+            text-align: center;
+        }
+        
+        .testimonial-slider {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .testimonial {
+            padding: 30px;
+            background: var(--light-color);
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            margin: 20px;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+            color: var(--text-light);
+        }
+        
+        .testimonial-author {
+            font-weight: bold;
+            color: var(--dark-color);
+        }
+        
+        /* Newsletter Section */
+        .newsletter {
+            background: linear-gradient(rgba(129, 154, 236, 0.9), rgba(196, 209, 252, 0.9)), url('https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+            color: var(--white);
+            text-align: center;
+            padding: 80px 20px;
+        }
+        
+        .newsletter h2 {
+            margin-bottom: 20px;
+        }
+        
+        .newsletter p {
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+        
+        .newsletter-form {
+            display: flex;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
+        .newsletter-form input {
+            flex: 1;
+            padding: 12px 15px;
+            border: none;
+            border-radius: 4px 0 0 4px;
+        }
+        
+        .newsletter-form button {
+            border-radius: 0 4px 4px 0;
+            background: var(--dark-color);
+        }
+        
+        .newsletter-form button:hover {
+            background: #1a252f;
+        }
+        
+        /* Footer Styles */
+        .main-footer {
+            background-color: var(--dark-color);
+            color: var(--white);
+            padding: 60px 0 20px;
+        }
+        
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+            color:rgba(157, 243, 243, 0.795);
+        }
+        
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background: #e0e0e0;
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-column a {
+            color: #ecf0f1;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .footer-column a:hover {
+            color: #2980b9;
+            padding-left: 5px;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(55, 35, 240, 0.397);
+            border-radius: 50%;
+            transition: var(--transition);
+        }
+        
+        .social-links a:hover {
+            background: var(--primary-color);
+            transform: translateY(-3px);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(25, 243, 243, 0.63);
+        }
+        
+        /* Related Posts Styles */
+    .related-posts {
+        background-color: #f8f9fa;
+        border-radius: 12px;
+        padding: 25px;
+        margin: 40px auto;
+        max-width: 800px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    }
+    
+    .related-posts-title {
+        color: #2c3e50;
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #e0e0e0;
+        text-align: center;
+    }
+    
+    .related-posts-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    .related-post-item {
+        background: white;
+        border-radius: 8px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .related-post-item:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    }
+    
+    .related-post-link {
+        display: flex;
+        align-items: center;
+        padding: 15px 20px;
+        text-decoration: none;
+        color: #34495e;
+        font-weight: 500;
+    }
+    
+    .post-icon {
+        font-size: 1.2rem;
+        margin-right: 15px;
+        min-width: 24px;
+        text-align: center;
+    }
+    
+    .post-title {
+        flex-grow: 1;
+    }
+    
+    .post-arrow {
+        color: #3498db;
+        font-size: 1.2rem;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+    
+    .related-post-link:hover .post-arrow {
+        opacity: 1;
+    }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .deals-wrapper {
+                flex-direction: column;
+            }
+            
+            .deals-image {
+                order: -1;
+                margin-bottom: 30px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+            
+            .main-nav ul {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 80px);
+                background: var(--white);
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                transition: var(--transition);
+            }
+            
+            .main-nav ul.active {
+                left: 0;
+            }
+            
+            .hero {
+                padding: 80px 20px;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .newsletter-form {
+                flex-direction: column;
+            }
+            
+            .newsletter-form input {
+                border-radius: 4px;
+                margin-bottom: 10px;
+            }
+            
+            .newsletter-form button {
+                border-radius: 4px;
+                width: 100%;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .product-list {
+                grid-template-columns: 1fr;
+            }
+        }
+</style>
+
+</head>
+<body>
+    <header class="main-header">
+    <div class="header-container">
+        <div class="logo-container">
+            <img src="LT.jpg" alt="LEOBEN TECHNOLOGIES Logo" class="site-logo">
+            <h1 class="logo">LEOBEN TECHNOLOGIES</h1>
+        </div>
+        
+        <nav class="main-nav">
+            <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    
+                    <li class="dropdown-container">
+                    <a href="products.html" class="dropdown-trigger">Products &#9662;</a>
+                    <div class="dropdown-menu">
+                        <a href="products.html">Smartphones</a>
+                        <a href="products.html">Laptops</a>
+                        <a href="products.html">Wearables</a>
+                        <a href="products.html">Accessories</a>
+                        <a href="products.html">Cameras</a>
+                        <a href="products.html">Gaming</a>
+                        <a href="products.html">Home & Kitchen</a>
+                        <a href="products.html">Car & Vehicle Electronics</a>
+                        <a href="products.html">Audio & Video</a>
+                        <a href="products.html">Service Plans</a>
+                    </div>
+                </li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="cart.html" class="cart-link">Cart (<span id="cart-count">0</span>)</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="help.html">Help</a></li>
+                </ul>
+            </nav>
+        </div>
+        </header>
+        <div class="hero">
+            <h1>Latest Gadgets & Electronics</h1>
+            <p>Discover the newest tech products and exclusive deals!</p>
+        </div>
+    <main>
+        <article>
+            <header>
+                <h2>Top Gadgets of 2025</h2>
+                <p>By Emma Aima Leoben | February 2025</p>
+            </header>
+            <div class="blog-container">
+    <div class="blog-header">
+        <h2>Tech Insights & Trends</h2>
+        <p>Stay updated with the latest in technology and gadget innovations</p>
+    </div>
+    
+    <div class="blog-posts">
+        <article class="blog-post">
+            <img src="https://cdn.pixabay.com/photo/2020/06/07/12/19/mobile-5270167_640.jpg" alt="Smartphones" class="post-image">
+            <div class="post-content">
+                <div class="post-meta">
+                    <span class="post-author">By Sarah Johnson</span>
+                    <span class="post-date">May 15, 2023</span>
+                </div>
+                <h3>The Evolution of Smartphones</h3>
+                <p>The latest smartphones feature advanced camera systems with computational photography, foldable OLED displays that 
+                    transform your device, and processors that rival desktop computers. Brands like Apple with their iPhone 15 Pro Max, 
+                    Samsung's Galaxy S23 Ultra, and Google's Pixel 8 Pro continue to push boundaries with AI-powered features, satellite 
+                    connectivity, and eco-friendly designs. The 2023 market also sees significant improvements in battery technology and 
+                    cooling systems for sustained peak performance.
+                </p>
+                <a href="index.html" class="read-more">Read More</a>
+            </div>
+        </article>
+        
+        <article class="blog-post">
+            <img src="https://cdn.pixabay.com/photo/2016/12/13/12/37/heart-rate-monitoring-device-1903997_640.jpg" alt="Wearables" class="post-image">
+            <div class="post-content">
+                <div class="post-meta">
+                    <span class="post-author">By Michael Chinonso</span>
+                    <span class="post-date">April 20, 2024</span>
+                </div>
+                <h3>Wearable Tech Revolution</h3>
+                <p>Modern wearables have evolved far beyond step counting. The Apple Watch Series 9 now offers blood oxygen monitoring and 
+                    ECG capabilities, while Fitbit's latest models provide detailed sleep stage analysis and stress management tools. Garmin's 
+                    outdoor watches feature multi-band GPS for extreme accuracy, and new health sensors can monitor blood pressure and glucose 
+                    levels non-invasively. The integration with telehealth platforms is creating a new era of preventive healthcare, making 
+                    wearables indispensable health companions.
+                </p>
+                <a href="about.html" class="read-more">Read More</a>
+            </div>
+        </article>
+        
+        <article class="blog-post">
+            <img src="https://cdn.pixabay.com/photo/2018/07/26/20/18/kitchen-3564506_640.jpg" alt="Home Electronics" class="post-image">
+            <div class="post-content">
+                <div class="post-meta">
+                    <span class="post-author">By David Adedeji</span>
+                    <span class="post-date">June 2, 2024</span>
+                </div>
+                <h3>Smart Home Integration</h3>
+                <p>The smart home ecosystem has matured significantly, with Matter protocol ensuring cross-brand compatibility. Voice assistants 
+                    now understand context and can control hundreds of devices simultaneously. Smart lighting systems like Philips Hue adapt to 
+                    circadian rhythms, while security cameras feature package recognition and AI-powered threat detection. Energy management 
+                    systems can now optimize electricity usage across solar panels, batteries, and grid power. The emergence of smart kitchens 
+                    with inventory-tracking refrigerators and precision cooking appliances is revolutionizing domestic life.
+                </p>
+                <a href="products.html" class="read-more">Read More</a>
+            </div>
+        </article>
+        
+        <article class="blog-post">
+            <img src="https://cdn.pixabay.com/photo/2017/07/31/23/18/white-2561942_640.jpg" alt="Audio Gadgets" class="post-image">
+            <div class="post-content">
+                <div class="post-meta">
+                    <span class="post-author">By Sarah Emmanuel</span>
+                    <span class="post-date">November 22, 2024</span>
+                </div>
+                <h3>Audio Technology Breakthroughs</h3>
+                <p>The audio industry is experiencing a renaissance with spatial audio technologies creating immersive 3D soundscapes. Sony's 
+                    WH-1000XM5 and Bose's QuietComfort Ultra lead in adaptive noise cancellation that responds to your environment. True 
+                    wireless earbuds now offer lossless audio over Bluetooth thanks to new codecs like LE Audio and LC3. Professional-grade 
+                    microphones are being integrated into headsets for crystal-clear conference calls, while gaming headsets feature sub-20ms 
+                    latency and personalized sound profiles. Hearing enhancement technologies are also making high-fidelity audio accessible to 
+                    all.
+                </p>
+                <a href="about.html" class="read-more">Read More</a>
+            </div>
+        </article>
+    </div>
+</div>
+        </article>
+    </main>
+
+        <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">By The Numbers</h2>
+            <div class="stats-container">
+                <div class="stat-item animate-on-scroll">
+                    <div class="stat-number" data-count="150">0</div>
+                    <div class="stat-text">Happy Clients</div>
+                </div>
+                <div class="stat-item animate-on-scroll" style="transition-delay: 0.2s">
+                    <div class="stat-number" data-count="30">0</div>
+                    <div class="stat-text">Innovative Products</div>
+                </div>
+                <div class="stat-item animate-on-scroll" style="transition-delay: 0.4s">
+                    <div class="stat-number" data-count="7">0</div>
+                    <div class="stat-text">Industry Awards</div>
+                </div>
+                <div class="stat-item animate-on-scroll" style="transition-delay: 0.6s">
+                    <div class="stat-number" data-count="95">0</div>
+                    <div class="stat-text">% Satisfaction</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+            <!-- Testimonials Section -->
+        <section class="testimonials">
+            <div class="container">
+                <h2 class="section-title">What Our Customers Say</h2>
+                <div class="testimonial-slider">
+                    <div class="testimonial">
+                        <p class="testimonial-text">"LEOBEN TECHNOLOGIES has the best customer service I've ever experienced. My laptop 
+                            arrived damaged, and they sent a replacement overnight with no hassle!"
+                        </p>
+                        <p class="testimonial-author">- Mr. Gbenga Adeolu, Abuja</p>
+                    </div>
+                    <div class="testimonial">
+                        <p class="testimonial-text">"The quality of products from LEOBEN is outstanding. I've purchased multiple items 
+                            and each one has exceeded my expectations."
+                        </p>
+                        <p class="testimonial-author">- Mrs. Chinaza Okili, Accra</p>
+                    </div>
+                    <div class="testimonial">
+                        <p class="testimonial-text">"Fast shipping and great prices. I'll definitely be shopping here again for all my 
+                            tech needs."
+                        </p>
+                        <p class="testimonial-author">- Dr. Isaiah Maxwell, Nairobi</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Newsletter Section -->
+        <section class="newsletter">
+            <div class="container">
+                <h2>Subscribe to Our Newsletter</h2>
+                <p>Stay updated with our latest products, exclusive deals, and tech news.</p>
+                <form class="newsletter-form">
+                    <input type="text" placeholder="Your full name" required>
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit" class="btn">Subscribe</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer Section -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-column">
+                    <h3>Shop</h3>
+                    <ul>
+                        <li><a href="products.html">All Products</a></li>
+                        <li><a href="index.html">New Arrivals</a></li>
+                        <li><a href="products.html">Deals</a></li>
+                        <li><a href="products.html">Service Plans</a></li>
+                        <li><a href="contact.html">Gift Cards</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="help.html">FAQs</a></li>
+                        <li><a href="cart.html">Shipping</a></li>
+                        <li><a href="help.html">Returns & Exchanges</a></li>
+                        <li><a href="help.html">Product Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Careers</a></li>
+                        <li><a href="about.html">Sustainability</a></li>
+                        <li><a href="blog.html">Press</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Connect With Us</h3>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/LeobenTechnologies" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.tiktok.com/@leobentechnologies" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://www.instagram.com/leobentechnologies/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/leobentechnologies/" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.twitter.com/leobentech" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                    <h3 style="margin-top: 20px;">Contact Info</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 88, Adeniran Sam Str, Liveland City, Nigeria</p>
+                    <p><i class="fas fa-phone"></i> +234 260-890-4433</p>
+                    <p><i class="fas fa-envelope"></i> info.leobentech@example.com</p>
+                </div>
+            </div>
+
+             <aside class="related-posts">
+    <h3 class="related-posts-title">Related Posts</h3>
+    <ul class="related-posts-list">
+        <li class="related-post-item">
+            <a href="products.html" class="related-post-link">
+                <span class="post-icon">💻</span>
+                <span class="post-title">Best Laptops of the Year</span>
+                <span class="post-arrow">→</span>
+            </a>
+        </li>
+        <li class="related-post-item">
+            <a href="about.html" class="related-post-link">
+                <span class="post-icon">🏠</span>
+                <span class="post-title">Smart Home Setup Guide</span>
+                <span class="post-arrow">→</span>
+            </a>
+        </li>
+        <li class="related-post-item">
+            <a href="index.html" class="related-post-link">
+                <span class="post-icon">📅</span>
+                <span class="post-title">Upcoming Tech Events</span>
+                <span class="post-arrow">→</span>
+            </a>
+        </li>
+    </ul>
+</aside>
+            <div class="footer-bottom">
+                <p>&copy; 2025 LEOBEN TECHNOLOGIES. All rights reserved. | <a href="about.html">Privacy Policy</a> | <a href="index.html">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEOBEN TECHNOLOGIES - Our Products</title>
+    <meta name="description" content="LEOBEN TECHNOLOGIES - Final Project">
+    <meta name="keywords" content="LEOBEN TECHNOLOGIES">
+    <meta name="author" content="Emma Aima Leoben">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+    /* Dropdown Styles */
+        .dropdown-container {
+            position: relative;
+        }
+        
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: var(--white);
+            box-shadow: var(--shadow);
+            border-radius: 5px;
+            padding: 15px;
+            min-width: 200px;
+            display: none;
+            flex-direction: column;
+            gap: 10px;
+            z-index: 100;
+        }
+        
+        .dropdown-container:hover .dropdown-menu {
+            display: flex;
+        }
+        
+        .dropdown-menu a {
+            padding: 8px 12px;
+            border-radius: 3px;
+        }
+        
+        .dropdown-menu a:hover {
+            background: rgba(76, 108, 216, 0.1);
+        }
+
+    /* Product Categories Section */
+    .product-categories {
+        padding: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .product-categories h3 {
+        text-align: center;
+        margin-bottom: 35px;
+        font-size: 28px;
+        color: #333;
+    }
+    
+    .category-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+    
+    .category-card {
+        flex: 1;
+        min-width: 200px;
+        max-width: 280px;
+        border: 2px solid #e1e1e1;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease;
+    }
+    
+    .category-card:hover {
+        transform: translateY(-5px);
+    }
+    
+    .category-card img {
+        width: 100%;
+        height: 170px;
+        object-fit: cover;
+        border-bottom: 1px solid #f0f0f0;
+    }
+    
+    .category-card h3 {
+        padding: 15px;
+        text-align: center;
+        font-size: 16px;
+        color: #444;
+        margin: 0;
+        background-color: #f9f9f9;
+    }
+    
+    @media (max-width: 900px) {
+        .category-card {
+            min-width: calc(50% - 20px);
+            max-width: calc(50% - 20px);
+        }
+    }
+    
+    @media (max-width: 600px) {
+        .category-card {
+            min-width: 100%;
+            max-width: 100%;
+        }
+    }
+    
+    /* Shipping Section Styling */
+.shipping-option {
+    background-color: #f9f9f9;
+    padding: 2rem 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.shipping-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.shipping-section {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+}
+
+.shipping-section h2 {
+    color: #2c3e50;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #eaeaea;
+    padding-bottom: 0.5rem;
+}
+
+.shipping-section h3 {
+    color:rgba(8, 5, 172, 0.644);
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #eaeaea;
+}
+.shipping-section p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.shipping-section ul {
+    list-style-type: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.shipping-section li {
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.shipping-section li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    border-color: #cbd5e0;
+}
+
+.shipping-section strong {
+    color: #2c3e50;
+    font-size: 1.2rem;
+    display: block;
+    margin-bottom: 0.8rem;
+}
+
+.shipping-section em {
+    font-style: normal;
+    color: #4a5568;
+    font-weight: 500;
+}
+
+.shipping-section br {
+    margin-bottom: 0.5rem;
+    display: block;
+    content: "";
+}
+
+/* Highlight Eco-Friendly option */
+.shipping-section li:nth-child(4) {
+    background-color: #f0fff4;
+    border-color: #c6f6d5;
+}
+
+.shipping-section li:nth-child(4) strong {
+    color: #2f855a;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .shipping-section ul {
+        grid-template-columns: 1fr;
+    }
+    
+    .shipping-section h2 {
+        font-size: 1.5rem;
+    }
+}
+
+    /* Testimonials Section */
+        .testimonials {
+            background-color: #c3eff5;
+            text-align: center;
+        }
+        
+        .testimonial-slider {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .testimonial {
+            padding: 30px;
+            background: var(--light-color);
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            margin: 20px;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+            color: var(--text-light);
+        }
+        
+        .testimonial-author {
+            font-weight: bold;
+            color: var(--dark-color);
+        }
+        
+        /* Newsletter Section */
+        .newsletter {
+            background: linear-gradient(rgba(129, 154, 236, 0.9), rgba(196, 209, 252, 0.9)), url('https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+            color: var(--white);
+            text-align: center;
+            padding: 80px 20px;
+        }
+        
+        .newsletter h2 {
+            margin-bottom: 20px;
+        }
+        
+        .newsletter p {
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+        
+        .newsletter-form {
+            display: flex;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
+        .newsletter-form input {
+            flex: 1;
+            padding: 12px 15px;
+            border: none;
+            border-radius: 4px 0 0 4px;
+        }
+        
+        .newsletter-form button {
+            border-radius: 0 4px 4px 0;
+            background: var(--dark-color);
+        }
+        
+        .newsletter-form button:hover {
+            background: #1a252f;
+        }
+        
+        /* Footer Styles */
+        .main-footer {
+            background-color: rgba(4, 41, 90, 0.61);
+            color: var(--white);
+            padding: 60px 0 20px;
+        }
+        
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+            color:#c3eff5
+        }
+        
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background: #c3eff5;
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-column a {
+            color: #ecf0f1;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .footer-column a:hover {
+            color: var(--primary-color);
+            padding-left: 5px;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(101, 86, 236, 0.397);
+            border-radius: 50%;
+            transition: var(--transition);
+        }
+        
+        .social-links a:hover {
+            background: var(--primary-color);
+            transform: translateY(-3px);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(2, 97, 97, 0.774);
+        }
+</style>
+
+</head>
+<body>
+    <header class="main-header">
+    <div class="header-container">
+        <div class="logo-container">
+            <img src="LT.jpg" alt="LEOBEN TECHNOLOGIES Logo" class="site-logo">
+            <h1 class="logo">LEOBEN TECHNOLOGIES</h1>
+        </div>
+        
+        <nav class="main-nav">
+            <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li class="dropdown-container">
+                    <a href="products.html" class="dropdown-trigger">Products &#9662;</a>
+                    <div class="dropdown-menu">
+                        <a href="products.html">Smartphones</a>
+                        <a href="products.html">Laptops</a>
+                        <a href="products.html">Wearables</a>
+                        <a href="products.html">Accessories</a>
+                        <a href="products.html">Cameras</a>
+                        <a href="products.html">Gaming</a>
+                        <a href="products.html">Home & Kitchen</a>
+                        <a href="products.html">Car & Vehicle Electronics</a>
+                        <a href="products.html">Audio & Video</a>
+                        <a href="products.html">Service Plans</a>
+                    </div>
+                </li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="cart.html" class="cart-link">Cart (<span id="cart-count">0</span>)</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="help.html">Help</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+    <main>
+        <section class="hero">
+            <h1>Latest Gadgets & Electronics</h1>
+            <p>Discover the newest tech products and exclusive deals!</p>
+        </section>
+        
+        <section class="featured-products">
+    <div class="container">
+        <h1 class="section-title">Featured Products</h1>
+        <div class="products-grid">
+
+            <!-- Product 1 -->
+            <article class="product-card">
+                <div class="product-badge">BESTSELLER</div>
+                <div class="product-image">
+                    <img src="https://cdn.pixabay.com/photo/2021/09/13/01/56/smartphone-6619823_640.jpg" alt="Smartphone X200">
+                </div>
+                <div class="product-details">
+                    <div class="product-header">
+                        <h3>Smartphone X200</h3>
+                        <div class="product-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="review-count">(128)</span>
+                        </div>
+                    </div>
+                    <p class="product-description">High-performance smartphone with stunning 6.5" AMOLED display and 48MP triple camera.</p>
+                    <div class="product-features">
+                        <div class="feature">
+                            <i class="icon">📱</i>
+                            <span>6.5" AMOLED</span>
+                        </div>
+                        <div class="feature">
+                            <i class="icon">📷</i>
+                            <span>48MP Camera</span>
+                        </div>
+                        <div class="feature">
+                            <i class="icon">⚡</i>
+                            <span>Fast Charge</span>
+                        </div>
+                    </div>
+                    <div class="product-footer">
+                        <span class="price">$699</span>
+                        <button class="add-to-cart">
+                            <i class="cart-icon">🛒</i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Product 2 -->
+            <article class="product-card">
+                <div class="product-badge">NEW</div>
+                <div class="product-image">
+                    <img src="https://cdn.pixabay.com/photo/2017/06/20/23/15/coffee-2425303_640.jpg" alt="Laptop Pro 15">
+                </div>
+                <div class="product-details">
+                    <div class="product-header">
+                        <h3>Laptop Pro 15"</h3>
+                        <div class="product-rating">
+                            <span class="stars">★★★★☆</span>
+                            <span class="review-count">(86)</span>
+                        </div>
+                    </div>
+                    <p class="product-description">Lightweight aluminum laptop with 10th Gen Intel Core i7 and 16GB RAM.</p>
+                    <div class="product-features">
+                        <div class="feature">
+                            <i class="icon">💻</i>
+                            <span>15.6" 4K</span>
+                        </div>
+                        <div class="feature">
+                            <i class="icon">🚀</i>
+                            <span>i7 Processor</span>
+                        </div>
+                        <div class="feature">
+                            <i class="icon">🔋</i>
+                            <span>12hr Battery</span>
+                        </div>
+                    </div>
+                    <div class="product-footer">
+                        <span class="price">$1199</span>
+                        <button class="add-to-cart">
+                            <i class="cart-icon">🛒</i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Product 3 -->
+            <article class="product-card">
+                <div class="product-badge">SALE</div>
+                <div class="product-image">
+                    <img src="https://cdn.pixabay.com/photo/2019/02/18/12/37/headphone-4004450_640.jpg" alt="Wireless Headphones">
+                </div>
+                <div class="product-details">
+                    <div class="product-header">
+                        <h3>Wireless Headphones Pro</h3>
+                        <div class="product-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="review-count">(214)</span>
+                        </div>
+                    </div>
+                    <p class="product-description">Premium noise-cancelling headphones with 30-hour battery life.</p>
+                    <div class="product-features">
+                        <div class="feature">
+                            <i class="icon">🔇</i>
+                            <span>Noise Cancel</span>
+                        </div>
+                        <div class="feature">
+                            <i class="icon">⏱️</i>
+                            <span>30hr Playtime</span>
+                        </div>
+                        <div class="feature">
+                            <i class="icon">🎵</i>
+                            <span>Hi-Fi Audio</span>
+                        </div>
+                    </div>
+                    <div class="product-footer">
+                        <span class="price"><span class="old-price">$249</span> $199</span>
+                        <button class="add-to-cart">
+                            <i class="cart-icon">🛒</i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Product 4 -->
+            <article class="product-card">
+                <div class="product-badge">BESTSELLER</div>
+                <div class="product-image">
+                    <img src="https://cdn.pixabay.com/photo/2017/03/30/00/17/camera-2186901_640.png" alt="Camera">
+                </div>
+                <div class="product-details">
+                    <div class="product-header">
+                        <h3>Canon Camera</h3>
+                        <div class="product-rating">
+                            <span class="stars">★★★★☆</span>
+                            <span class="review-count">(56)</span>
+                        </div>
+                    </div>
+                    <p class="product-description">Capture stunning photos and videos with this high-quality camera.</p>
+                    <div class="product-features">
+                        <div class="feature">
+                            <i class="icon">📸</i>
+                            <span>Quality Images</span>
+                        </div>
+                        <div class="feature">
+                            <i class="icon">🔋</i>
+                            <span>Long-lasting Battery</span>
+                        </div>
+                        <div class="feature">
+                            <i class="icon">🌐</i>
+                            <span>GPS Navigation</span>
+                        </div>
+                    </div>
+                    <div class="product-footer">
+                        <span class="price">$999</span>
+                        <button class="add-to-cart">
+                            <i class="cart-icon">🛒</i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Product 5 -->
+            <article class="product-card">
+                <div class="product-badge">NEW</div>
+                <div class="product-image">
+                    <img src="https://cdn.pixabay.com/photo/2022/04/15/15/09/smart-watch-7134697_640.jpg" alt="Smartwatch Series 5">
+                </div>
+                <div class="product-details">
+                    <div class="product-header">
+                        <h3>Smartwatch Series 5</h3>
+                        <div class="product-rating">
+                            <span class="stars">★★★★☆</span>
+                            <span class="review-count">(108)</span>
+                        </div>
+                    </div>
+                    <p class="product-description">Track your fitness and stay connected with this stylish smartwatch.</p>
+                    <div class="product-features">
+                        <div class="feature">
+                            <i class="icon">⌚</i>
+                            <span>Fitness Tracking</span>
+                        </div>
+                        <div class="feature">
+                            <i class="icon">📞</i>
+                            <span>Call Alerts</span>
+                        </div>
+                        <div class="feature">
+                            <i class="icon">💧</i>
+                            <span>Water Resistant</span>
+                        </div>
+                    </div>
+                    <div class="product-footer">
+                        <span class="price">$299</span>
+                        <button class="add-to-cart">
+                            <i class="cart-icon">🛒</i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Product 6 -->
+            <article class="product-card">
+                <div class="product-badge">SALE</div>
+                <div class="product-image">
+                    <img src="https://cdn.pixabay.com/photo/2015/02/07/20/58/tv-627876_640.jpg" alt="Television">
+                </div>
+                <div class="product-details">
+                    <div class="product-header">
+                        <h3>LG Smart Television</h3>
+                        <div class="product-rating">
+                            <span class="stars">★★★★☆</span>
+                            <span class="review-count">(62)</span>
+                        </div>
+                    </div>
+                    <p class="product-description">Watch your favorite shows and movies with this high-quality television.</p>
+                    <div class="product-features">
+                        <div class="feature">
+                            <i class="icon">🖥️</i>
+                            <span>Quality Display</span>
+                        </div>
+                        <div class="feature">
+                            <i class="icon">🛠️</i>
+                            <span>Smart Features</span>
+                        </div>
+                        <div class="feature">
+                            <i class="icon">📺</i>
+                            <span>Streaming Services</span>
+                        </div>
+                    </div>
+                    <div class="product-footer">
+                        <span class="price">$2099</span>
+                        <button class="add-to-cart">
+                            <i class="cart-icon">🛒</i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+        </div>
+    </div>
+</section>
+        <section class="product-categories">
+    <h2>Shop by Category</h2>
+    <div class="category-grid">
+        <div class="category-card">
+            <img src="https://cdn.pixabay.com/photo/2022/09/25/22/25/iphone-7479306_640.jpg" alt="Iphones">
+            <img src="https://cdn.pixabay.com/photo/2022/05/02/14/28/smartphone-7169689_640.jpg" alt="Iphones">
+            <img src="https://cdn.pixabay.com/photo/2020/06/07/12/19/mobile-5270167_640.jpg" alt="Samsung">
+            <img src="https://cdn.pixabay.com/photo/2020/05/18/22/28/samsung-5188631_640.jpg" alt="Samsung">
+            <h3>Smartphones</h3>
+        </div>
+        <div class="category-card">
+            <img src="https://cdn.pixabay.com/photo/2014/09/24/14/29/macbook-459196_640.jpg" alt="MacBook">
+            <img src="https://cdn.pixabay.com/photo/2020/03/04/07/28/black-4900736_640.jpg" alt="HP Laptop">
+            <img src="https://cdn.pixabay.com/photo/2016/11/29/06/18/home-office-1867761_640.jpg" alt="Home & Office Computer">
+            <img src="https://cdn.pixabay.com/photo/2020/09/26/16/34/laptop-5604558_640.jpg" alt="Lenovo Laptops">
+            <h3>Laptops</h3>
+        </div>
+        <div class="category-card">
+            <img src="https://cdn.pixabay.com/photo/2016/12/13/12/37/heart-rate-monitoring-device-1903997_640.jpg" alt="Health Tracker">
+            <img src="https://cdn.pixabay.com/photo/2017/07/31/23/18/white-2561942_640.jpg" alt="Headphones">
+            <img src="https://cdn11.bigcommerce.com/s-3k9txw3o66/images/stencil/1024w/products/876/62711/d170a49c0ccdbda68a95193f527db5a8dc13d11a53a53739de099f0a3b091d07__59008.1731381712.png" alt="Bluetooth Tracker">
+            <img src="https://images.thdstatic.com/productImages/9c943c5c-cbcc-4060-b1bd-8a9932421d14/svn/phyfalip-telephone-accessories-27g286sa05-1-64_600.jpg" alt="Bluetooth Earbuds">
+            <h3>Wearables</h3>
+        </div>
+        <div class="category-card">
+            <img src="https://m.media-amazon.com/images/I/61XilbzO8qL._AC_SL1500_.jpg" alt="Iphone Charging Cable">
+            <img src="https://rukminim2.flixcart.com/image/850/1000/xif0q/speaker/home-audio-speaker/g/r/x/3in-1-bluetooth-speaker-with-light-wireless-charger-only-ios-sam-original-imagrzvcfsheyfnh.jpeg?q=90&crop=false" alt="Bluetooth Speaker">
+            <img src="https://cdn.pixabay.com/photo/2022/02/11/13/16/technology-7007329_640.jpg" alt="Mini Projector">
+            <img src="https://res.cloudinary.com/jerrick/image/upload/d_642250b563292b35f27461a7.png,f_jpg,fl_progressive,q_auto,w_1024/5fb7c907514ad0001c11da08.jpg" alt="Drawing Tablet">
+            <h3>Accessories</h3>
+        </div>
+        <div class="category-card">
+            <img src="https://cdn.pixabay.com/photo/2014/11/22/00/51/camera-541213_640.jpg" alt="Olympus Camera">
+            <img src="https://cdn.pixabay.com/photo/2014/08/29/14/53/camera-431119_640.jpg" alt="Camera Lens Photography">
+            <img src="https://cdn.pixabay.com/photo/2012/04/14/13/15/digital-camera-33879_640.png" alt="Digital Camera Lens">
+            <img src="https://cdn.pixabay.com/photo/2023/04/06/09/39/camera-7903435_640.jpg" alt="Camera Video Cinema Photography ">
+            <h3>Cameras</h3>
+        </div>
+        <div class="category-card">
+            <img src="https://cdn.pixabay.com/photo/2020/10/01/16/53/game-controller-5619105_640.jpg" alt="Gaming Controller">
+            <img src="https://cdn.pixabay.com/photo/2021/11/22/14/23/computer-6816638_640.jpg" alt="Sounds for Gaming Technology">
+            <img src="https://cdn.pixabay.com/photo/2017/05/19/14/09/ps4-2326616_640.jpg" alt="PlayStation Device">
+            <img src="https://cdn.pixabay.com/photo/2024/04/18/10/09/ai-generated-8703975_640.jpg" alt="AI Generated Virtual Reality">
+            <h3>Gaming Electronics</h3>
+        </div>
+        <div class="category-card">
+            <img src="https://media.istockphoto.com/id/940320814/photo/domestic-kitchen.jpg?s=2048x2048&w=is&k=20&c=01e_HnNd6yMxWf8QNc2cy7_U1eaR03lvWcSuNZUA7X8=" 
+            alt="Domestic Kitchen Electronics">
+            <img src="https://www.harveynorman.com.au/blog/assets/Ninja-Creami-Ice-Cream-Maker-1-1000x554.jpg" alt="Ice Cream Maker">
+            <img src="https://cdn.pixabay.com/photo/2022/01/04/05/29/kitchen-6914223_640.jpg" alt="Kitchen Interior Oven">
+            <img src="https://media.istockphoto.com/id/1408821537/photo/household-appliances-for-the-kitchen-sale-of-electrical-equipment-for-cooking-at-home-coffee.jpg?s=2048x2048&w=is&k=20&c=unwn7PiEGLQpfv5UEf9qbhgtFVVlD4VDdygwrj_rzRY=" 
+            alt="Household Appliances for Kitchen">
+            <h3>Home & Kitchen Electronics</h3>
+        </div>
+        <div class="category-card">
+            <img src="https://cdn.pixabay.com/photo/2023/04/28/02/43/car-7955720_640.jpg" alt="Car Leather Seats">
+            <img src="https://cdn.thewirecutter.com/wp-content/media/2021/02/caarchargers-2048px-2002.jpg?auto=webp&quality=75&width=1024" alt="Car Chargers">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWmufQiXjr6P3uMLj9MD79AxnnJ_d5vKq-sg&s" alt="Car Bluetooth Speakers">
+            <img src="https://www-sygic.akamaized.net/content/1-press/50-sygic-gps-navigation-soon-to-be-available-via-android-auto/aa_sygic_cardisplay.png" 
+            alt="GPS Navigation for Cars">
+            <h3>Car & Vehicle Electronics</h3>
+        </div>
+        <div class="category-card">
+            <img src="https://www.nexusappliances.com.ng/wp-content/uploads/2021/10/TVVVVV-01-1-600x425.png" alt="Smart TV">
+            <img src="https://ae01.alicdn.com/kf/S4493b9cc4ded445aaaf5930d7c5088df4.jpg_640x640q90.jpg" alt="Multi USB Cable Adapter">
+            <img src="https://i5.walmartimages.com/seo/Sony-5-2-Channel-Wireless-Bluetooth-4K-3D-A-V-Surround-Sound-Receiver-Klipsch-Multimedia-Home-Theater-Speaker-System_119030d5-5b1d-4245-bd1f-628749af884a.e6a1f5bc32d4db1884627ff41202b7dc.png" 
+            alt="Wireless Bluetooth AV Sound Systems">
+            <img src="https://www.cnet.com/a/img/resize/de06b2005af5f4bcbd50b491d5ab107b6cbf0b90/hub/2024/12/09/977e01cc-7008-49b8-b7e4-11bea5511a54/img-0562.jpg?auto=webp&width=1200" 
+            alt="Sleep Headphones">
+            <h3>Audio & Video Electronics</h3>
+        </div>
+        <div class="category-card">
+            <img src="https://www.jacanawarranty.com/wp-content/uploads/2023/04/Extended-Appliances-Warranty.jpg" alt="Insurance and Warranty for Electronics">
+            <img src="https://m.media-amazon.com/images/I/91iKrqNjubL._AC_SL1500_.jpg" alt="Laptop and Keyboard Cleaning Kit">
+            <img src="https://remonline.app/uploads/wysiwyg/blog/business-continuous/start-electronics-repair/man-repairing-laptop.webp" 
+            alt="Repairs Services for Electronics">
+            <img src="https://img.pacifiko.com/PROD/resize/1/1000x1000/ODBkYTMzNT.jpg" alt="32-in-1 Electronics Cleaning Tool Kit">
+            <h3>Service Plans</h3>
+        </div>
+    </div>
+</section>
+            
+            <div class="product-grid">
+                <!-- Products will be loaded here via JavaScript -->
+            </div>
+        </div>
+    </main>
+    
+    <!-- Shipping Options Section -->
+        <section class="shipping-option">
+            <div class="shipping-container">
+            <div class="shipping-section">
+                <h2>Aima-Leo Enterprises Limited</h2>
+                <h3>Our Shipping Option</h3>
+                <p>This is our organization's sustainable delivery network for products. We are also catered to small and medium scale
+                    businessed in Africa. It seeks to improve and optimize from the traditional delivery methods established in the past into
+                    eco-friendly methods. It offers tech-driven routes and used a network of electric vehicles (EVs) and other eco-friendly
+                    transport methods (e.g. bicycles, cargo bikes) for long-mile delivery.
+                </p>
+            <ul>
+                <li>
+                    <strong>Standard Shipping</strong> <br>
+                    <em>Method:</em> Delivery van, electric vehicle, or cargo bike <br>
+                    <em>Cost:</em> $30.00 <br>
+                    <em>Delivery Time:</em> 3-5 business days
+                </li>
+                <li>
+                    <strong>Express Shipping</strong> <br>
+                    <em>Method:</em> Priority electric vehicle or motorcycle courier <br>
+                    <em>Cost:</em> $25.00 <br>
+                    <em>Delivery Time:</em> 1-2 business days
+                </li>
+                <li>
+                    <strong>24 Hour Delivery</strong> <br>
+                    <em>Method:</em> Dedicated EV, motorcycle, or bicycle courier <br>
+                    <em>Cost:</em> $40.00 <br>
+                    <em>Delivery Time:</em> Next business day
+                </li>
+                <li>
+                    <strong>Eco-Friendly Delivery</strong> <br>
+                    <em>Method:</em> Bicycle or cargo bike (within select cities) <br>
+                    <em>Cost:</em> $28.00 <br>
+                    <em>Delivery Time:</em> 2-4 business days
+                </li>
+            </ul>
+            </div>
+            </div>
+        </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">By The Numbers</h2>
+            <div class="stats-container">
+                <div class="stat-item animate-on-scroll">
+                    <div class="stat-number" data-count="150">0</div>
+                    <div class="stat-text">Happy Clients</div>
+                </div>
+                <div class="stat-item animate-on-scroll" style="transition-delay: 0.2s">
+                    <div class="stat-number" data-count="45">0</div>
+                    <div class="stat-text">Innovative Products</div>
+                </div>
+                <div class="stat-item animate-on-scroll" style="transition-delay: 0.4s">
+                    <div class="stat-number" data-count="12">0</div>
+                    <div class="stat-text">Industry Awards</div>
+                </div>
+                <div class="stat-item animate-on-scroll" style="transition-delay: 0.6s">
+                    <div class="stat-number" data-count="98">0</div>
+                    <div class="stat-text">% Satisfaction</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonials Section -->
+        <section class="testimonials">
+            <div class="container">
+                <h2 class="section-title">What Our Customers Say</h2>
+                <div class="testimonial-slider">
+                    <div class="testimonial">
+                        <p class="testimonial-text">"LEOBEN TECHNOLOGIES has the best customer service I've ever experienced. My laptop 
+                            arrived damaged, and they sent a replacement overnight with no hassle!"
+                        </p>
+                        <p class="testimonial-author">- Mr. Gbenga Adeolu, Abuja</p>
+                    </div>
+                    <div class="testimonial">
+                        <p class="testimonial-text">"The quality of products from LEOBEN is outstanding. I've purchased multiple items 
+                            and each one has exceeded my expectations."
+                        </p>
+                        <p class="testimonial-author">- Mrs. Chinaza Okili, Accra</p>
+                    </div>
+                    <div class="testimonial">
+                        <p class="testimonial-text">"Fast shipping and great prices. I'll definitely be shopping here again for all my 
+                            tech needs."
+                        </p>
+                        <p class="testimonial-author">- Dr. Isaiah Maxwell, Nairobi</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Newsletter Section -->
+        <section class="newsletter">
+            <div class="container">
+                <h2>Subscribe to Our Newsletter</h2>
+                <p>Stay updated with our latest products, exclusive deals, and tech news.</p>
+                <form class="newsletter-form">
+                    <input type="text" placeholder="Your full name" required>
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit" class="btn">Subscribe</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-column">
+                    <h3>Shop</h3>
+                    <ul>
+                        <li><a href="products.html">All Products</a></li>
+                        <li><a href="index.html">New Arrivals</a></li>
+                        <li><a href="products.html">Deals</a></li>
+                        <li><a href="products.html#service-plans">Service Plans</a></li>
+                        <li><a href="products.html#gift-cards">Gift Cards</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="help.html">FAQs</a></li>
+                        <li><a href="help.html">Shipping</a></li>
+                        <li><a href="help.html">Returns & Exchanges</a></li>
+                        <li><a href="help.html">Product Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Careers</a></li>
+                        <li><a href="about.html">Sustainability</a></li>
+                        <li><a href="blog.html">Press</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Connect With Us</h3>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/LeobenTechnologies" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.tiktok.com/@leobentechnologies" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://www.instagram.com/leobentechnologies/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/leobentechnologies/" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.twitter.com/leobentech" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                    <h3 style="margin-top: 20px;">Contact Info</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 88, Adeniran Sam Str, Liveland City, Nigeria</p>
+                    <p><i class="fas fa-phone"></i> +234 260-890-4433</p>
+                    <p><i class="fas fa-envelope"></i> info.leobentech@example.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 LEOBEN TECHNOLOGIES. All rights reserved. | <a href="about.html">Privacy Policy</a> | <a href="contact.html">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
