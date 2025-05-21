@@ -1,0 +1,174 @@
+**LEOBEN TECHNOLOGIES**
+* Project Guidelines
+
+Assignment Submission:
+This assignment requires you to design, code, and deploy a multipage website. The project will demonstrate your skills in HTML5, CSS3, JavaScript, and website deployment.
+
+You will:
+
+- Design a website with at least three pages (e.g., Home, About, Contact) and ensure it’s responsive.
+- Use HTML5 for semantic structure, CSS3 for styling, and JavaScript for interactivity (e.g., form validation, image sliders).
+- Deploy the website using a platform like GitHub Pages, Netlify, or Vercel.
+- Submit all website files (HTML, CSS, JS, images) along with a live website URL and project documentation
+
+* **📌 Overview**
+LEOBEN TECHNOLOGIES is an e-commerce platform specializing in cutting-edge electronics, gadgets, and smart home appliances. This project includes a fully 
+responsive website with the following pages:
+- Home Page (Landing page with featured products, deals, and company info)
+- Products Page (Categorized product listings)
+- About Us Page (Company history, mission, and values)
+- Contact Page (Customer support form and information)
+- Blog Page (Tech news, reviews, and updates)
+- Cart Page (Shopping cart and checkout interface)
+- Help Page (FAQs, shipping, returns, and support)
+
+* **📂 Pages Breakdown**
+* 1️⃣ Home Page (index.html)
+- Hero Section: Engaging banner with a call-to-action (Shop Now button).
+- Features Section: Highlights key benefits (Quality Assurance, Fast Delivery, 24/7 Support, Easy Returns).
+- About Us Section: Brief company introduction with a logo.
+- Exclusive Deals Section: Discounted products with original vs. sale prices.
+- Featured Products Section: Grid layout of top-selling items.
+- Testimonials Section: Customer reviews for social proof.
+- Newsletter Subscription: Email signup form.
+
+##🔹 Key Features:
+✔ Responsive design (mobile-friendly)
+✔ Interactive product cards with hover effects
+✔ Dynamic cart counter (JavaScript)
+✔ Newsletter registration 
+
+* 2️⃣ Products Page (products.html)
+Categories:
+- Smartphones
+- Laptops
+- Wearables
+- Accessories
+- Cameras
+- Gaming
+- Home & Kitchen
+- Car & Vehicle Electronics
+- Audio & Video
+- Service Plans
+
+##🔹 Key Features:
+✔ Filterable product listings
+✔ "Add to Cart" functionality
+✔ Dropdown navigation for categories
+✔ Newsletter registration 
+
+* 3️⃣ About Us Page (about.html)
+- Company Story: Founding history and mission.
+- Team Section: Employee photos and bios (optional).
+- Sustainability Commitment: Eco-friendly initiatives.
+- Customer Testimonials.
+
+##🔹 Key Features:
+✔ Clean, professional layout
+✔ Responsive image display
+✔ Newsletter registration 
+
+* 4️⃣ Contact Page (contact.html)
+- Contact Form: Name, email, subject, message.
+- Support Information:
+- Email: info.leobentech@example.com
+- Phone: +234 260-890-4433
+- Address: 88, Adeniran Sam Str, Liveland City, Nigeria
+- Social Media Links.
+
+##🔹 Key Features:
+✔ Form validation (JavaScript)
+✔ Newsletter Registration
+
+* 5️⃣ Blog Page (blog.html)
+Latest Tech Articles: News, reviews, and guides.
+
+Categories:
+- Product Reviews
+- Tech Trends
+- How-To Guides
+- Company Updates
+- Search & Filter Options.
+
+##🔹 Key Features:
+✔ Blog post cards with thumbnails
+✔ Newletter registration 
+
+* 6️⃣ Cart Page (cart.html)
+- Cart Items: Product image, name, price, quantity.
+- Order Summary: Subtotal, shipping, and total.
+- Checkout Button (Links to payment gateway).
+
+##🔹 Key Features:
+✔ Quantity adjustment (+/- buttons)
+✔ Remove item option
+✔ Responsive table layout
+✔ Newsletter registration 
+
+* 7️⃣ Help Page (help.html)
+- FAQs: Common customer questions.
+- Shipping Info: Delivery times and costs.
+- Returns & Refunds Policy.
+- Product Support: Troubleshooting guides.
+
+##🔹 Key Features:
+✔ Accordion-style FAQs (JavaScript)
+✔ Searchable help articles
+✔ Newsletter registration 
+
+* **🛠 Technologies Used**
+Frontend:
+- HTML5, CSS3, JavaScript
+- Flexbox & Grid for layouts
+- Font Awesome for icons
+
+Responsive Design:
+- Mobile-first approach
+- Media queries for different screen sizes
+
+Optional Backend (if extended):
+- Node.js + Express
+- MongoDB (for user accounts & orders)
+
+* **📝 Notes for Developers**
+✔ Customization:
+- Update product data in the HTML or connect to a database.
+- Add real payment integration (Stripe, PayPal).
+
+✔ SEO Optimization:
+- Meta tags (description, keywords) are included.
+- Semantic HTML5 structure for better indexing.
+
+✔ Performance:
+- Optimized images (compressed).
+- Minified CSS/JS in production.
+
+✔ Future Improvements:
+- User authentication (login/signup).
+- Product search functionality.
+- Wishlist feature.
+
+* **📞 Contact Information**
+For support or inquiries:
+📧 Email: info.leobentech@example.com
+📞 Phone: +234 260-890-4433
+📍 Address: 88, Adeniran Sam Str, Liveland City, Nigeria
+
+* **🔗 Social Media:**
+- Facebook = "https://www.facebook.com/LeobenTechnologies" 
+- TikTok = "https://www.tiktok.com/@leobentechnologies" 
+- Instagram = "https://www.instagram.com/leobentechnologies/" 
+- LinkedIn = "https://www.linkedin.com/company/leobentechnologies/" 
+- Twitter = "https://www.twitter.com/leobentech" 
+                   
+* **🚀 Deployment**
+The site can be hosted on:
+- Netlify (Static hosting)
+- Vercel (Frontend deployment)
+- AWS S3 (Scalable cloud hosting)
+- GitHub (Full Stack deployment}
+
+* **🎯 Conclusion**
+LEOBEN TECHNOLOGIES is a modern, user-friendly e-commerce platform designed for tech enthusiasts. 
+The website is fully responsive, visually appealing, and ready for scaling with additional features like user accounts and payment processing.
+
