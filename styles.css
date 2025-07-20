@@ -567,6 +567,19 @@ img {
             text-align: center;
         }
         
+        .stats-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            color: lightblue;
+        }
+
+        .stats-section p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            color: lightblue;
+            color: rgba(255, 255, 255, 0.8);
+        }
         .stats-container {
             display: flex;
             flex-wrap: wrap;
@@ -594,7 +607,7 @@ img {
 
 /* Footer Styles */
         .main-footer {
-            background-color: var(--gray-color);
+            background-color: #02273d;
             color: var(--white);
             padding: 60px 0 20px;
         }
@@ -676,7 +689,18 @@ img {
             gap: 15px;
             margin-top: 20px;
         }
-        
+
+        .social-links-footer a {
+            color: var(--white);
+            text-decoration: none;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+
+        .social-links-footer a:hover {
+            color: var(--primary-color);
+        }
+
         .social-links-footer a {
             width: 40px;
             height: 40px;
@@ -687,12 +711,7 @@ img {
             justify-content: center;
             transition: var(--transition);
         }
-        
-        .social-links-footer a:hover {
-            background: var(--primary-color);
-            transform: translateY(-5px);
-        }
-        
+    
         .footer-bottom {
             text-align: center;
             padding-top: 20px;
