@@ -357,6 +357,52 @@
             background: #1a252f;
         }
         
+/* Stats Section */
+        .stats-section {
+            padding: 80px 0;
+            background: linear-gradient(rgba(78, 102, 153, 0.692), rgba(3, 2, 65, 0.8)), url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+        }
+        
+        .stats-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            color: rgb(2, 3, 70);
+        }
+
+        .stats-section p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            color: rgb(2, 53, 70);
+        }
+
+        .stats-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 30px;
+        }
+        
+        .stat-item {
+            flex: 1;
+            min-width: 200px;
+            padding: 30px;
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: aqua;
+        }
+        
+        .stat-text {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
         /* Footer Styles */
         .main-footer {
             background-color: var(--dark-color);
@@ -403,6 +449,22 @@
             transition: var(--transition);
         }
         
+        .footer-column p {
+            color: white;
+            font-size: 1.2rem;
+        }
+
+        .footer-bottom p { 
+            color: white;
+            font-size: 1.2rem;
+        }
+
+        .footer-bottom p a {
+            color: #ecf0f1;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
         .footer-column a:hover {
             color: var(--primary-color);
             padding-left: 5px;
@@ -532,7 +594,7 @@
         <nav class="main-nav">
             <button class="menu-toggle" aria-label="Toggle menu">☰</button>
                 <ul>
-                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     
                     <li class="dropdown-container">
                     <a href="products.html" class="dropdown-trigger">Products &#9662;</a>
@@ -761,6 +823,7 @@
         </section>
     </main>
     
+    <!-- Footer Section -->
     <footer class="main-footer">
         <div class="container">
             <div class="footer-container">
