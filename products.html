@@ -21,8 +21,8 @@
             position: absolute;
             top: 100%;
             left: 0;
-            background: var(--white);
-            box-shadow: var(--shadow);
+            background: white;
+            box-shadow: #1a252f;
             border-radius: 5px;
             padding: 15px;
             min-width: 200px;
@@ -202,6 +202,32 @@
     color: #2f855a;
 }
 
+/* Stats Section */
+.stats {
+    background:rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    text-align: center;
+}
+
+.stats h2 {
+    color: #f5f9fc;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+.stats p {
+    color: #f5f9fc;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.stats ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .shipping-section ul {
@@ -285,7 +311,7 @@
         
         /* Footer Styles */
         .main-footer {
-            background-color: rgba(4, 41, 90, 0.61);
+            background-color: rgba(2, 12, 56, 0.89);
             color: var(--white);
             padding: 60px 0 20px;
         }
@@ -330,7 +356,7 @@
         }
         
         .footer-column a:hover {
-            color: var(--primary-color);
+            color: skyblue;
             padding-left: 5px;
         }
         
@@ -359,8 +385,26 @@
         .footer-bottom {
             text-align: center;
             padding-top: 20px;
-            border-top: 1px solid rgba(2, 97, 97, 0.774);
+            border-top: 1px solid rgba(5, 14, 14, 0.774);
         }
+
+        .footer-bottom p {
+            margin: 0;
+            font-size: 1.2rem;
+            color: #ecf0f1;
+        }
+
+        .footer-bottom a {
+            color: #c3eff5;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .footer-column p {
+            color: white;
+            font-size: 1.2rem;
+        }
+        
 </style>
 
 </head>
@@ -375,7 +419,7 @@
         <nav class="main-nav">
             <button class="menu-toggle" aria-label="Toggle menu">☰</button>
             <ul>
-                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li class="dropdown-container">
                     <a href="products.html" class="dropdown-trigger">Products &#9662;</a>
                     <div class="dropdown-menu">
@@ -699,13 +743,13 @@
             <img src="https://cdn.pixabay.com/photo/2023/04/28/02/43/car-7955720_640.jpg" alt="Car Leather Seats">
             <img src="https://cdn.thewirecutter.com/wp-content/media/2021/02/caarchargers-2048px-2002.jpg?auto=webp&quality=75&width=1024" alt="Car Chargers">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWmufQiXjr6P3uMLj9MD79AxnnJ_d5vKq-sg&s" alt="Car Bluetooth Speakers">
-            <img src="https://www-sygic.akamaized.net/content/1-press/50-sygic-gps-navigation-soon-to-be-available-via-android-auto/aa_sygic_cardisplay.png" 
+            <img src="https://static1.pocketlintimages.com/wordpress/wp-content/uploads/2024/09/fun-images-24-3.jpg" 
             alt="GPS Navigation for Cars">
             <h3>Car & Vehicle Electronics</h3>
         </div>
         <div class="category-card">
             <img src="https://www.nexusappliances.com.ng/wp-content/uploads/2021/10/TVVVVV-01-1-600x425.png" alt="Smart TV">
-            <img src="https://ae01.alicdn.com/kf/S4493b9cc4ded445aaaf5930d7c5088df4.jpg_640x640q90.jpg" alt="Multi USB Cable Adapter">
+            <img src="https://m.media-amazon.com/images/I/71iKi2n39VL._SL1499_.jpg" alt="Multi USB Cable Adapter">
             <img src="https://i5.walmartimages.com/seo/Sony-5-2-Channel-Wireless-Bluetooth-4K-3D-A-V-Surround-Sound-Receiver-Klipsch-Multimedia-Home-Theater-Speaker-System_119030d5-5b1d-4245-bd1f-628749af884a.e6a1f5bc32d4db1884627ff41202b7dc.png" 
             alt="Wireless Bluetooth AV Sound Systems">
             <img src="https://www.cnet.com/a/img/resize/de06b2005af5f4bcbd50b491d5ab107b6cbf0b90/hub/2024/12/09/977e01cc-7008-49b8-b7e4-11bea5511a54/img-0562.jpg?auto=webp&width=1200" 
