@@ -100,6 +100,39 @@
             background: var(--primary-color);
             border-radius: 2px;
         }
+
+        /* Dropdown Styles */
+        .dropdown-container {
+            position: relative;
+        }
+        
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            box-shadow: #1a252f;
+            border-radius: 5px;
+            padding: 15px;
+            min-width: 200px;
+            display: none;
+            flex-direction: column;
+            gap: 10px;
+            z-index: 100;
+        }
+        
+        .dropdown-container:hover .dropdown-menu {
+            display: flex;
+        }
+        
+        .dropdown-menu a {
+            padding: 8px 12px;
+            border-radius: 3px;
+        }
+        
+        .dropdown-menu a:hover {
+            background: rgba(76, 108, 216, 0.1);
+        }
         
         /* Header Styles */
         .main-header {
@@ -221,6 +254,11 @@
         .about-content {
             flex: 1;
             min-width: 300px;
+        }
+
+        .about-content p {
+            color:rgba(0, 0, 0, 0.829);
+            font-size: 1.1rem;
         }
         
         .about-text h2 {
@@ -878,7 +916,148 @@
             background: var(--primary-color);
             color: var(--white);
         }
+ 
+        /* Stats Section */
+        .stats-section {
+            padding: 80px 0;
+            background: linear-gradient(rgba(183, 204, 250, 0.459), rgba(3, 2, 94, 0.8)), url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+        }
+        
+        .stats-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            color: rgb(2, 53, 70);
+        }
 
+        .stats-section p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            color: rgb(2, 53, 70);
+        }
+
+        .stats-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 30px;
+        }
+        
+        .stat-item {
+            flex: 1;
+            min-width: 200px;
+            padding: 30px;
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: aqua;
+        }
+        
+        .stat-text {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        /* Footer Styles */
+        .main-footer {
+            background-color: #02273d;
+            color: var(--white);
+            padding: 60px 0 20px;
+        }
+        
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+            color:#c3eff5;
+        }
+        
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background: var(--primary-color);
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-column a {
+            color: #ecf0f1;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .footer-column p {
+            color: white;
+            font-size: 1.2rem;
+        }
+
+        .footer-bottom p { 
+            color: white;
+            font-size: 1rem;
+        }
+
+        .footer-bottom p a {
+            color: #ecf0f1;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .footer-column a:hover {
+            color: var(--primary-color);
+            padding-left: 5px;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(55, 35, 240, 0.397);
+            border-radius: 50%;
+            transition: var(--transition);
+        }
+        
+        .social-links a:hover {
+            background: var(--primary-color);
+            transform: translateY(-3px);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(25, 243, 243, 0.63);
+        }
+        
         /* Animations */
         @keyframes fadeIn {
             from { opacity: 0; }
@@ -972,7 +1151,7 @@
                             <a href="products.html">Service Plans</a>
                         </div>
                     </li>
-                    <li><a href="about.html" class="active">About Us</a></li>
+                    <li><a href="about.html">About Us</a></li>
                     <li><a href="contact.html">Contact</a></li>
                     <li><a href="cart.html" class="cart-link"><i class="fas fa-shopping-cart"></i> (<span id="cart-count">0</span>)</a></li>
                     <li><a href="blog.html">Blog</a></li>
