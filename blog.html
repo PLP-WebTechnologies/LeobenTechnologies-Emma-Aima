@@ -104,7 +104,7 @@
     }
     
     .blog-header p {
-        color: #7f8c8d;
+        color: #020e38;
         font-size: 16px;
     }
     
@@ -198,36 +198,139 @@
         }
     }
 
-    /* Testimonials Section */
-        .testimonials {
-            background-color: #c3eff5;
-            text-align: center;
-        }
-        
-        .testimonial-slider {
-            max-width: 800px;
-            margin: 0 auto;
-            position: relative;
-        }
-        
-        .testimonial {
-            padding: 30px;
-            background: var(--light-color);
-            border-radius: 8px;
-            box-shadow: var(--shadow);
-            margin: 20px;
-        }
-        
-        .testimonial-text {
-            font-style: italic;
-            margin-bottom: 20px;
-            color: var(--text-light);
-        }
-        
-        .testimonial-author {
-            font-weight: bold;
-            color: var(--dark-color);
-        }
+    /* Testimonials Section Styles */
+.testimonials {
+    background-color: #bef3fa;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.testimonials .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: #333;
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    width: 70px;
+    height: 3px;
+    background-color: #4CAF50;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.testimonial-slider {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.testimonial {
+    display: none;
+    animation: fadeIn 1s ease-in-out;
+    padding: 30px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.testimonial:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.testimonial.active {
+    display: block;
+}
+
+.testimonial-text {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 20px;
+    font-style: italic;
+    position: relative;
+}
+
+.testimonial-text::before,
+.testimonial-text::after {
+    content: '"';
+    font-size: 2rem;
+    color: #4CAF50;
+    opacity: 0.5;
+}
+
+.testimonial-author {
+    font-weight: bold;
+    color: #333;
+    font-size: 1.1rem;
+}
+
+.slider-controls {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+}
+
+.slider-prev,
+.slider-next {
+    background: #4745d1;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1.2rem;
+}
+
+.slider-prev:hover,
+.slider-next:hover {
+    background: #454ea0;
+    transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .testimonial-text {
+        font-size: 1rem;
+    }
+    
+    .testimonial-author {
+        font-size: 0.9rem;
+    }
+}
         
         /* Newsletter Section */
         .newsletter {
@@ -319,12 +422,27 @@
             padding-left: 5px;
         }
         
+        .footer-bottom p {
+            color: white;
+            font-size: 1.2rem;
+        }
+
+        .footer-bottom p a {
+            color: #ecf0f1;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
         .social-links {
             display: flex;
             gap: 15px;
             margin-top: 20px;
         }
         
+        .footer-column p {
+            color: white;
+            font-size: 1.2rem;
+        }
         .social-links a {
             display: inline-flex;
             align-items: center;
@@ -513,7 +631,7 @@
         <nav class="main-nav">
             <button class="menu-toggle" aria-label="Toggle menu">☰</button>
                 <ul>
-                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     
                     <li class="dropdown-container">
                     <a href="products.html" class="dropdown-trigger">Products &#9662;</a>
@@ -549,6 +667,7 @@
                 <h2>Top Gadgets of 2025</h2>
                 <p>By Emma Aima Leoben | February 2025</p>
             </header>
+            
             <div class="blog-container">
     <div class="blog-header">
         <h2>Tech Insights & Trends</h2>
@@ -560,7 +679,7 @@
             <img src="https://cdn.pixabay.com/photo/2020/06/07/12/19/mobile-5270167_640.jpg" alt="Smartphones" class="post-image">
             <div class="post-content">
                 <div class="post-meta">
-                    <span class="post-author">By Sarah Johnson</span>
+                    <span class="post-author">By Sarah Jasper</span>
                     <span class="post-date">May 15, 2023</span>
                 </div>
                 <h3>The Evolution of Smartphones</h3>
@@ -614,7 +733,7 @@
             <img src="https://cdn.pixabay.com/photo/2017/07/31/23/18/white-2561942_640.jpg" alt="Audio Gadgets" class="post-image">
             <div class="post-content">
                 <div class="post-meta">
-                    <span class="post-author">By Sarah Emmanuel</span>
+                    <span class="post-author">By Hailey Emmanuel</span>
                     <span class="post-date">November 22, 2024</span>
                 </div>
                 <h3>Audio Technology Breakthroughs</h3>
@@ -659,31 +778,32 @@
     </section>
 
             <!-- Testimonials Section -->
-        <section class="testimonials">
-            <div class="container">
-                <h2 class="section-title">What Our Customers Say</h2>
-                <div class="testimonial-slider">
-                    <div class="testimonial">
-                        <p class="testimonial-text">"LEOBEN TECHNOLOGIES has the best customer service I've ever experienced. My laptop 
-                            arrived damaged, and they sent a replacement overnight with no hassle!"
-                        </p>
-                        <p class="testimonial-author">- Mr. Gbenga Adeolu, Abuja</p>
-                    </div>
-                    <div class="testimonial">
-                        <p class="testimonial-text">"The quality of products from LEOBEN is outstanding. I've purchased multiple items 
-                            and each one has exceeded my expectations."
-                        </p>
-                        <p class="testimonial-author">- Mrs. Chinaza Okili, Accra</p>
-                    </div>
-                    <div class="testimonial">
-                        <p class="testimonial-text">"Fast shipping and great prices. I'll definitely be shopping here again for all my 
-                            tech needs."
-                        </p>
-                        <p class="testimonial-author">- Dr. Isaiah Maxwell, Nairobi</p>
-                    </div>
-                </div>
+<section class="testimonials">
+    <div class="container">
+        <h2 class="section-title">What Our Customers Say</h2>
+        <div class="testimonial-slider">
+            <div class="testimonial active">
+                <p class="testimonial-text">"LEOBEN TECHNOLOGIES has the best customer service I've ever experienced. My laptop 
+                    arrived damaged, and they sent a replacement overnight with no hassle!"</p>
+                <p class="testimonial-author">- Mr. Gbenga Adeolu, Abuja</p>
             </div>
-        </section>
+            <div class="testimonial">
+                <p class="testimonial-text">"The quality of products from LEOBEN is outstanding. I've purchased multiple items 
+                    and each one has exceeded my expectations."</p>
+                <p class="testimonial-author">- Mrs. Chinaza Okili, Accra</p>
+            </div>
+            <div class="testimonial">
+                <p class="testimonial-text">"Fast shipping and great prices. I'll definitely be shopping here again for all my 
+                    tech needs."</p>
+                <p class="testimonial-author">- Dr. Isaiah Maxwell, Nairobi</p>
+            </div>
+            <div class="slider-controls">
+                <button class="slider-prev" aria-label="Previous testimonial">&#10094;</button>
+                <button class="slider-next" aria-label="Next testimonial">&#10095;</button>
+            </div>
+        </div>
+    </div>
+</section>
         
         <!-- Newsletter Section -->
         <section class="newsletter">
