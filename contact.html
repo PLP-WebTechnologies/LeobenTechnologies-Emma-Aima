@@ -23,6 +23,39 @@
             margin: 0 auto;
         }
         
+        /* Dropdown Styles */
+        .dropdown-container {
+            position: relative;
+        }
+        
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            box-shadow: #1a252f;
+            border-radius: 5px;
+            padding: 15px;
+            min-width: 200px;
+            display: none;
+            flex-direction: column;
+            gap: 10px;
+            z-index: 100;
+        }
+        
+        .dropdown-container:hover .dropdown-menu {
+            display: flex;
+        }
+        
+        .dropdown-menu a {
+            padding: 8px 12px;
+            border-radius: 3px;
+        }
+        
+        .dropdown-menu a:hover {
+            background: rgba(76, 108, 216, 0.1);
+        }
+
         /* Form Container Styles */
         .contact-section {
             flex: 1;
@@ -310,6 +343,23 @@
             color:rgba(0, 0, 0, 0.1);
         }
 
+        .footer-column p {
+            margin: 0;
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .footer-bottom p {
+            color: white;
+            font-size: 1.2rem;
+        }
+
+        .footer-bottom a {
+            color: #7fc7f7;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
         /* Responsive Adjustments */
         @media (max-width: 768px) {
             .contact-section, 
@@ -379,7 +429,7 @@
                         </div>
                     </li>
                     <li><a href="about.html">About Us</a></li>
-                    <li><a href="contact.html" class="active">Contact</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                     <li><a href="cart.html" class="cart-link">Cart (<span id="cart-count">0</span>)</a></li>
                     <li><a href="blog.html">Blog</a></li>
                     <li><a href="help.html">Help</a></li>
