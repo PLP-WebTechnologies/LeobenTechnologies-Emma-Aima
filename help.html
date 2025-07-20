@@ -70,76 +70,37 @@
         }
 
         /* Dropdown Styles */
-.dropdown-container {
-    position: relative;
-    display: inline-block; /* Ensures proper positioning */
-}
-
-.dropdown-menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background: #fff;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    border-radius: 8px;
-    padding: 10px 0; /* Better padding structure */
-    min-width: 200px;
-    display: none;
-    flex-direction: column;
-    gap: 4px;
-    z-index: 1000;
-    opacity: 0;
-    transform: translateY(10px);
-    transition: opacity 0.2s ease, transform 0.2s ease;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    margin-top: 5px; /* Small gap from trigger */
-}
-
-/* Show dropdown on hover AND focus (for accessibility) */
-.dropdown-container:hover .dropdown-menu,
-.dropdown-container:focus-within .dropdown-menu,
-.dropdown-menu.show { /* Added show class for JavaScript control */
-    display: flex;
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.dropdown-menu a {
-    padding: 10px 16px;
-    border-radius: 4px;
-    color: #333;
-    text-decoration: none;
-    transition: background-color 0.2s ease;
-    font-size: 14px;
-}
-
-.dropdown-menu a:hover,
-.dropdown-menu a:focus {
-    background: rgba(76, 108, 216, 0.1);
-    color: #1a3fd9;
-    outline: none;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .dropdown-menu {
-        position: static; /* Stack on mobile */
-        width: 100%;
-        box-shadow: none;
-        border: 1px solid #eee;
-        margin-top: 8px;
-    }
-    
-    .dropdown-container {
-        display: block; /* Full width on mobile */
-        width: 100%;
-    }
-}
-
-/* Accessibility improvements */
-.dropdown-menu a:focus {
-    background: rgba(76, 108, 216, 0.2);
-}
+        .dropdown-container {
+            position: relative;
+        }
+        
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            box-shadow: #1a252f;
+            border-radius: 5px;
+            padding: 15px;
+            min-width: 200px;
+            display: none;
+            flex-direction: column;
+            gap: 10px;
+            z-index: 100;
+        }
+        
+        .dropdown-container:hover .dropdown-menu {
+            display: flex;
+        }
+        
+        .dropdown-menu a {
+            padding: 8px 12px;
+            border-radius: 3px;
+        }
+        
+        .dropdown-menu a:hover {
+            background: rgba(76, 108, 216, 0.1);
+        }
 
         /* Testimonials Section */
         .testimonials {
@@ -230,7 +191,8 @@
             margin-bottom: 20px;
             position: relative;
             padding-bottom: 10px;
-            color: #1a252f;
+            color:rgba(3, 82, 82, 0.884);
+            text-align: center;
         }
         
         .footer-column h3::after {
@@ -240,7 +202,7 @@
             left: 0;
             width: 50px;
             height: 2px;
-            background: var(--primary-color);
+            background: #001129;
         }
         
         .footer-column ul {
@@ -252,14 +214,13 @@
         }
         
         .footer-column a {
-            color: #194745;
+            color: #034657;
             text-decoration: none;
             transition: var(--transition);
-            text-align: justify;
         }
         
         .footer-column a:hover {
-            color: var(--primary-color);
+            color: skyblue;
             padding-left: 5px;
         }
         
@@ -275,7 +236,7 @@
             justify-content: center;
             width: 40px;
             height: 40px;
-            background: rgba(55, 35, 240, 0.397);
+            background: rgba(3, 92, 114, 0.589);
             border-radius: 50%;
             transition: var(--transition);
         }
@@ -288,7 +249,25 @@
         .footer-bottom {
             text-align: center;
             padding-top: 20px;
-            border-top: 1px solid rgba(25, 243, 243, 0.63);
+            border-top: 1px solid rgba(5, 75, 75, 0.938);
+            color:rgba(0, 0, 0, 0.1);
+        }
+
+        .footer-column p {
+            margin: 0;
+            font-size: 1.2rem;
+            color: rgba(11, 2, 85, 0.7);
+        }
+
+        .footer-bottom p {
+            color: rgb(14, 6, 124);
+            font-size: 1.2rem;
+        }
+
+        .footer-bottom a {
+            color: #064d7c;
+            text-decoration: none;
+            transition: var(--transition);
         }
         
         /* Responsive Styles */
@@ -386,7 +365,7 @@
         <nav class="main-nav">
             <button class="menu-toggle" aria-label="Toggle menu">☰</button>
                 <ul>
-                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     
                     <li class="dropdown-container">
                     <a href="products.html" class="dropdown-trigger">Products &#9662;</a>
@@ -519,7 +498,8 @@
             </div>
         </section>
     </main>
-    
+
+    <!-- Footer Section -->
     <footer class="main-footer">
         <div class="container">
             <div class="footer-container">
@@ -569,7 +549,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 LEOBEN TECHNOLOGIES. All rights reserved. | <a href="about.html">Privacy Policy</a> | <a href="index.html">Terms of Service</a></p>
+                <p>&copy; 2025 LEOBEN TECHNOLOGIES. All rights reserved. | <a href="about.html">Privacy Policy</a> | <a href="contact.html">Terms of Service</a></p>
             </div>
         </div>
     </footer>
