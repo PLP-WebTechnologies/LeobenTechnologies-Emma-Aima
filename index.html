@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LEOBEN TECHNOLOGIES</title>
+    <title>LEOBEN TECHNOLOGIES - Home</title>
     <link rel="stylesheet" href="styles.css">
     <meta name="description" content="LEOBEN TECHNOLOGIES - Final Project">
     <meta name="keywords" content="LEOBEN TECHNOLOGIES">
@@ -173,8 +173,8 @@
             position: absolute;
             top: 100%;
             left: 0;
-            background: var(--white);
-            box-shadow: var(--shadow);
+            background: white;
+            box-shadow: #1a252f;
             border-radius: 5px;
             padding: 15px;
             min-width: 200px;
@@ -217,7 +217,7 @@
         }
         
         .hero .btn {
-            background: var(--primary-color);
+            background: rgb(5, 5, 121);
             border: 2px solid var(--white);
         }
         
@@ -228,7 +228,7 @@
         
         /* About Section */
         .about {
-            background-color: #89eaf7;
+            background-color: #dbf5f8;
         }
         
         .about-content {
@@ -498,7 +498,7 @@
         
         /* Footer Styles */
         .main-footer {
-            background-color: #121e46;
+            background-color: #02273d;
             color: var(--white);
             padding: 60px 0 20px;
         }
@@ -537,6 +537,22 @@
         }
         
         .footer-column a {
+            color: #ecf0f1;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .footer-column p {
+            color: white;
+            font-size: 1.2rem;
+        }
+
+        .footer-bottom p { 
+            color: white;
+            font-size: 1rem;
+        }
+
+        .footer-bottom p a {
             color: #ecf0f1;
             text-decoration: none;
             transition: var(--transition);
@@ -670,7 +686,7 @@
             <nav class="main-nav">
                 <button class="menu-toggle" aria-label="Toggle menu">☰</button>
                 <ul>
-                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li class="dropdown-container">
                         <a href="products.html" class="dropdown-trigger">Products <i class="fas fa-chevron-down"></i></a>
                         <div class="dropdown-menu">
